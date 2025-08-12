@@ -1,12 +1,14 @@
 import { createApp } from 'vue'
+import { createMemoryHistory, createRouter } from 'vue-router'
 import App from './App.vue'
-import router from './router'
+import HomeComponent from './components/Home.vue'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
-import bootstrap from 'bootstrap'
 import './assets/custom.scss' // custom colors
 
-const app = createApp(App)
+const router = createRouter({
+  history: createMemoryHistory(),
+  routes: [{ path: '/', name: 'home', component: HomeComponent }],
+})
 
-app.use(router)
-
-app.mount('#app')
+createApp(App).use(router).mount('#app')

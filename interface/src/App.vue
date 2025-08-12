@@ -1,16 +1,27 @@
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="">
+    <HeaderBar />
+    <HomeComponent />
+  </div>
 </template>
 
 <script>
+import HeaderBar from './components/HeaderBar.vue'
+import HomeComponent from './components/Home.vue'
+
 export default {
   name: 'App',
   components: {
-
+    HeaderBar,
+    HomeComponent,
   },
 }
 </script>
+
+<style>
+/* to encompass the entire page */
+html,
+#app {
+  background-color: #000d13;
+}
+</style>
