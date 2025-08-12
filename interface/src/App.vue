@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <HeaderBar />
-    <HomeComponent />
+    <header-bar />
+    <home-component />
   </div>
 </template>
 

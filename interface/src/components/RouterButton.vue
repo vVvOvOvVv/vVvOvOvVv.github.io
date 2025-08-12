@@ -31,11 +31,10 @@ export default {
 
 <style>
 .page-btn {
-  background: linear-gradient(90deg, #0a9396, #0b6dc9);
+  background: linear-gradient(90deg, #0bbbbe, #0b7ae2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
 }
 .directory-btn {
   color: #e9d8a6;
