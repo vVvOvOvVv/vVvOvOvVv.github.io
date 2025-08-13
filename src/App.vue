@@ -13,6 +13,7 @@
 import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
 
+// test
 export default {
   name: 'App',
   components: {
