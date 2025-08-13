@@ -5,18 +5,23 @@
     <br />
     <br />
     <home-component />
+    <work-experience />
   </div>
 </template>
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
+import WorkExperience from './components/WorkExperience.vue'
+
+import jsonData from './assets/data.json'
 
 export default {
   name: 'App',
   components: {
     HeaderBar,
     HomeComponent,
+    WorkExperience,
   },
 }
 </script>

@@ -1,0 +1,155 @@
+{
+  "workAndExperience": [
+    {
+      "company": "Truffle",
+      "title": "Volunteer Web Browser Alpha Tester (UX)",
+      "startDate": "Jan 2025",
+      "endDate": "Present"
+    },
+    {
+      "company": "Lionbridge Technologies",
+      "title": "Volunteer Game Tester (UX)",
+      "startDate": "Mar 2023",
+      "endDate": "Present"
+    },
+    {
+      "company": "Ubisoft",
+      "title": "Volunteer Play Tester (UX)",
+      "startDate": "Apr 2023",
+      "endDate": null
+    },
+    {
+      "company": "University of Wollongong",
+      "title": "Bachelor's in Computer Science (Game & Mobile Development)",
+      "startDate": "Jan 2022",
+      "endDate": "Dec 2024"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Recreation of Lightner's Live",
+      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game. I aim to recreate this segment, with a few additions of my own, such as additional songs, a slightly different approach to song/map difficulty, and more. GitHub: https://github.com/vVvOvOvVv/Lightners-Live",
+      "imgPath": "",
+      "type": "Game Dev",
+      "isWIP": true,
+      "toolsUsed": ["Godot", "GDScript", "GitHub", "DAW", "aseprite"]
+    },
+    {
+      "name": "FPS Prototype - Graveborn",
+      "desc": "Within a month, I have developed a small-scale game in a group of 5 people, with me leading the overall design and development of the game. We split the work by level design, enemy AI development, menus/UI, and other tasks amongst ourselves. We utilized Unity 3D to develop the game, using free public assets for the game, including character models, animations, particle effects, and VFX.",
+      "imgPath": "",
+      "type": "Game Dev",
+      "isWIP": false,
+      "toolsUsed": ["Unity", "C#", "GitHub"]
+    },
+    {
+      "name": "VR Room",
+      "desc": "A group project of a room in VR made in Unity. This project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done through a Meta Quest 3.",
+      "imgPath": "",
+      "type": "Game Dev (VR)",
+      "isWIP": false,
+      "toolsUsed": ["Unity", "C#", "Meta Quest 3"]
+    },
+    {
+      "name": "vVvOvOvVv.github.io",
+      "desc": "Created as a way to showcase my projects, and brush up on web development, I present this website!",
+      "imgPath": "",
+      "type": "Web Development",
+      "isWIP": false,
+      "toolsUsed": ["Vue 3", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "VS Code"]
+    }
+  ],
+  "skills": [
+    {
+      "programmingLang": [
+        {
+          "name": "HTML",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "JavaScript",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "CSS",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "C#",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "GDScript",
+          "imgPath": "",
+          "refLink": ""
+        }
+      ],
+      "artAndDesign": [
+        {
+          "name": "Procreate",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "aseprite",
+          "imgPath": "",
+          "refLink": ""
+        }
+      ],
+      "devTools": [
+        {
+          "name": "VS Code",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "Visual Studio",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "Godot",
+          "imgPath": "",
+          "refLink": ""
+        },
+        {
+          "name": "Unity",
+          "imgPath": "",
+          "refLink": ""
+        }
+      ]
+    }
+  ],
+  "aboutMe": "",
+  "socials": [
+    {
+      "name": "Instagram",
+      "imgPath": "",
+      "refLink": ""
+    },
+    {
+      "name": "BlueSky",
+      "imgPath": "",
+      "refLink": ""
+    },
+    {
+      "name": "Cara",
+      "imgPath": "",
+      "refLink": ""
+    },
+    {
+      "name": "LinkedIn",
+      "imgPath": "",
+      "refLink": ""
+    },
+    {
+      "name": "GitHub",
+      "imgPath": "",
+      "refLink": ""
+    }
+  ]
+}
