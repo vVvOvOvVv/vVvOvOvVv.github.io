@@ -1,6 +1,10 @@
 <template>
   <div class="">
+    <br />
+    <br />
     <header-bar />
+    <br />
+    <br />
     <home-component />
   </div>
 </template>
