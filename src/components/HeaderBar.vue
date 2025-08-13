@@ -15,13 +15,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@use '@/assets/custom.scss' as *;
+
 .header-bar {
   position: fixed;
   top: 5;
   left: 0;
   right: 0;
   z-index: 1030; /* high enough to be above other content */
-  background-color: rgba(10, 148, 150, 0.5);
+  background-color: $transparent-primary-color;
 }
 </style>

@@ -1,7 +1,6 @@
-@use 'bootstrap' with (
-  $primary: #0a9396,
-  $secondary: #ca6702,
-  $info: #e9d8a6,
-  $black: #001219,
-  $danger: #ae2012
-);
+$primary-color: #0a9396;
+$transparent-primary-color: rgba(10, 148, 150, 0.5);
+$secondary-color: #ca6702;
+$primary-text: #e9d8a6;
+$background-color: #000b0f;
+$important-color: #ae2012;

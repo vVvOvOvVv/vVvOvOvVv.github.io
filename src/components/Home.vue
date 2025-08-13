@@ -1,10 +1,10 @@
 <template>
-  <div class="home-component mt-5 mx-5 px-5 container">
-    <div class="row">
-      <div class="col-md-8 d-flex flex-column align-items-start">
+  <div class="home-component m-5 px-5 container">
+    <div class="row align-items-center">
+      <div class="brief-intro col-md-8 d-flex flex-column align-items-start">
         <!-- flex-column changes flex direction to vertical -->
         <colored-text>Hey there! I'm</colored-text>
-        <colored-text color="#0a9396" size="45px" weight="bold">
+        <colored-text colorType="tealType" size="45px" weight="bold">
           Verna Beltran Salangsang
         </colored-text>
         <Typer
@@ -15,19 +15,27 @@
             'a volunteer game & system tester',
             'a video game enthusiast',
           ]"
-          style="
-            --char-typed-color: #ca6702;
-            --caret-idle-color: #ca6702;
-            --caret-typing-color: #ca6702;
-            --caret-selecting-color: #ca6702;
-            --caret-erasing-color: #ca6702;
-            --caret-complete-color: #ca6702;
-            --char-selected-color: white;
-            --char-selected-background-color: #ca6702;
-          "
-        ></Typer>
+          :style="{
+            '--char-typed-color': secondaryColor,
+            '--caret-idle-color': secondaryColor,
+            '--caret-typing-color': secondaryColor,
+            '--caret-selecting-color': secondaryColor,
+            '--caret-erasing-color': secondaryColor,
+            '--caret-complete-color': secondaryColor,
+            '--char-selected-color': primaryText,
+            '--char-selected-background-color': secondaryColor,
+          }"
+        />
       </div>
-      <div class="col-md-4 d-flex align-items-center">test 2</div>
+      <div class="image-intro col-md-4 d-flex align-items-center">
+        <img
+          src="../assets/profile.png"
+          class="img-fluid"
+          alt="Me! ...and my profile picture"
+          width="85%"
+          oncontextmenu="return false;"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -43,7 +51,13 @@ export default {
     ColoredText,
     Typer,
   },
+  data() {
+    return {
+      // note to self: figure out a way to use the variables/values from the scss file
+      // instead of duplicating the values
+      secondaryColor: '#ca6702',
+      primaryText: '#e9d8a6',
+    }
+  },
 }
 </script>
-
-<style></style>

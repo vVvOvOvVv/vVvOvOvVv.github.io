@@ -1,7 +1,6 @@
 <template>
   <div class="">
     <br />
-    <br />
     <header-bar />
     <br />
     <br />
@@ -13,7 +12,6 @@
 import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
 
-// test
 export default {
   name: 'App',
   components: {
@@ -23,10 +21,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@use '@/assets/custom.scss' as *;
+
 /* to encompass the entire page */
 html,
 #app {
-  background-color: #000d13;
+  background-color: $background-color;
+  font-size: 20px;
 }
 </style>

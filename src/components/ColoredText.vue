@@ -1,6 +1,6 @@
 <!-- Only for non-interactable text (i.e. not links) -->
 <template>
-  <div class="colored-text" :style="{ color: color, fontSize: size, fontWeight: weight }">
+  <div class="colored-text" :class="[colorType]" :style="{ fontSize: size, fontWeight: weight }">
     <slot />
     <!-- ensure contents are within the div -->
   </div>
@@ -10,13 +10,13 @@
 export default {
   name: 'ColoredText',
   props: {
-    color: {
+    colorType: {
       type: String,
-      default: '#e9d8a6',
+      default: 'whiteType',
     },
     size: {
       type: String,
-      default: '16px',
+      default: '20px',
     },
     weight: {
       type: String,
@@ -25,3 +25,17 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+@use '@/assets/custom.scss' as *;
+
+.whiteType {
+  color: $primary-text;
+}
+.tealType {
+  color: $primary-color;
+}
+.importantType {
+  color: $important-color;
+}
+</style>
