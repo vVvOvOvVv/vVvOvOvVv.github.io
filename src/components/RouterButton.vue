@@ -1,11 +1,7 @@
 <template>
   <div>
-    <RouterLink
-      :class="{ 'page-btn': isPageName, 'directory-btn': !isPageName }"
-      class="fw-bold"
-      :to="{ name: routeName }"
-      >{{ msg }}</RouterLink
-    >
+    <button v-if="isPageName" class="page-btn fw-bold" @click="goToSection">{{ msg }}</button>
+    <button v-else class="directory-btn fw-bold" @click="goToSection">{{ msg }}</button>
   </div>
 </template>
 
@@ -25,18 +21,42 @@ export default {
       type: Boolean,
       default: true,
     },
+    targetId: {
+      type: String,
+      default: '',
+    },
+  },
+  methods: {
+    goToSection() {
+      if (this.targetId.length == 0) return
+      const el = document.getElementById(this.targetId)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+      else console.error(this.targetId + ' could not be found')
+    },
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+@use '@/assets/custom.scss' as *;
+
 .page-btn {
-  background: linear-gradient(90deg, #0bbbbe, #0b7ae2);
+  background: linear-gradient(90deg, $gradient-start, $gradient-end);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 .directory-btn {
-  color: #e9d8a6;
+  color: $primary-text;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.directory-btn:hover {
+  background-color: $transparent-primary-color;
 }
 </style>

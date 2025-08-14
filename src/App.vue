@@ -1,29 +1,29 @@
 <template>
   <div class="">
-    <br />
+    <br id="home" />
     <header-bar />
     <br />
     <br />
     <div class="home container">
       <home-component />
     </div>
-    <div class="work container">
+    <div id="work" class="work container">
       <section-header>Work & Experience</section-header>
       <div class="work-list container d-flex flex-column align-items-center">
         <work-experience v-for="(job, idx) in workExpData" :key="idx" :work-obj="job" />
       </div>
     </div>
-    <div class="project container">
+    <div id="project" class="project container">
       <section-header>Projects</section-header>
       <div class="project-list container">
         <!-- table: 2 columns, noOfProj/2 rows -->
       </div>
     </div>
-    <div class="skill container">
+    <div id="skill" class="skill container">
       <section-header>Skills & Tools</section-header>
       <div class="skill-cat-list container"></div>
     </div>
-    <div class="about container">
+    <div id="about" class="about container">
       <section-header>About Me</section-header>
       <div class="about-desc container"></div>
     </div>
