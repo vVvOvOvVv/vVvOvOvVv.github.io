@@ -1,5 +1,5 @@
 <template>
-  <div class="project-box"></div>
+  <div class="project-box container"></div>
 </template>
 
 <script>
