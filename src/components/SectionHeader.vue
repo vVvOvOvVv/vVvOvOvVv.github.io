@@ -1,6 +1,6 @@
 <template>
   <div class="section-header container d-flex flex-column mb-3">
-    <colored-text :size="isSubheader ? '35px' : '45px'" weight="bold">
+    <colored-text :size="isSubheader ? '25px' : '45px'" weight="bold">
       <slot />
     </colored-text>
     <canvas id="header-partition" ref="canvasElement" width="200" height="1"></canvas>
@@ -31,8 +31,14 @@ export default {
     const canvas = this.$refs.canvasElement
     const ctx = canvas.getContext('2d')
 
+    if (this.isSubheader) {
+      var canvasWidth = 20
+    } else {
+      canvasWidth = 40
+    }
+
     ctx.fillStyle = this.secondaryColor
-    ctx.fillRect(0, 0, 40, 1)
+    ctx.fillRect(0, 0, canvasWidth, 1)
 
     console.log(this.isSubheader)
   },

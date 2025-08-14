@@ -25,13 +25,15 @@ export default {
   },
   methods: {
     getString() {
-      const msgLength = 100
+      const msgLength = 100 // excluding [[ and ]]
       var strLength =
         this.workObj.company.length +
         this.workObj.title.length +
         this.workObj.startDate.length +
         this.workObj.endDate.length +
-        ' |  - '.length
+        3 + // ' | '
+        4 + // spaces
+        3 // ' - '
       const hyphenCount = Math.max(msgLength - strLength, 0)
       const hyphenStr = '-'.repeat(hyphenCount)
 

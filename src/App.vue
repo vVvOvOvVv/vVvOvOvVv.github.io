@@ -28,7 +28,7 @@
       <div class="about-desc container"></div>
     </div>
     <div class="socials container">
-      <section-header>Where you can find me</section-header>
+      <section-header :is-subheader="true">Where you can find me</section-header>
       <div class="social-list container"></div>
     </div>
   </div>
