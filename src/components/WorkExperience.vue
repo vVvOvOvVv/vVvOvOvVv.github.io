@@ -31,20 +31,22 @@ export default {
         this.workObj.title.length +
         this.workObj.startDate.length +
         this.workObj.endDate.length +
-        ' ||  - '.length
+        ' |  - '.length
       const hyphenCount = Math.max(msgLength - strLength, 0)
       const hyphenStr = '-'.repeat(hyphenCount)
 
       return (
+        '[[ ' +
         this.workObj.company +
-        ' || ' +
+        ' | ' +
         this.workObj.title +
         ' ' +
         hyphenStr +
         ' ' +
         this.workObj.startDate +
         ' - ' +
-        this.workObj.endDate
+        this.workObj.endDate +
+        ' ]]'
       )
     },
   },

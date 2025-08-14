@@ -10,8 +10,26 @@
     <div class="work container">
       <section-header>Work & Experience</section-header>
       <div class="work-list container d-flex flex-column align-items-center">
-        <work-experience />
+        <work-experience v-for="(job, idx) in workExpData" :key="idx" :work-obj="job" />
       </div>
+    </div>
+    <div class="project container">
+      <section-header>Projects</section-header>
+      <div class="project-list container">
+        <!-- table: 2 columns, noOfProj/2 rows -->
+      </div>
+    </div>
+    <div class="skill container">
+      <section-header>Skills & Tools</section-header>
+      <div class="skill-cat-list container"></div>
+    </div>
+    <div class="about container">
+      <section-header>About Me</section-header>
+      <div class="about-desc container"></div>
+    </div>
+    <div class="socials container">
+      <section-header>Where you can find me</section-header>
+      <div class="social-list container"></div>
     </div>
   </div>
 </template>
@@ -22,7 +40,7 @@ import HomeComponent from './components/Home.vue'
 import SectionHeader from './components/SectionHeader.vue'
 import WorkExperience from './components/WorkExperience.vue'
 
-// import jsonData from './assets/data.json'
+import jsonData from './assets/data.json'
 
 export default {
   name: 'App',
@@ -31,6 +49,17 @@ export default {
     HomeComponent,
     SectionHeader,
     WorkExperience,
+  },
+  data() {
+    return {
+      workExpData: jsonData.workAndExperience,
+      projData: jsonData.projects,
+      programmingLangData: jsonData.skills.programmingLang,
+      artDesignData: jsonData.skills.artAndDesign,
+      toolsData: jsonData.skills.devTools,
+      aboutData: jsonData.aboutMe,
+      socialData: jsonData.socials,
+    }
   },
 }
 </script>
