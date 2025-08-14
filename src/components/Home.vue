@@ -7,32 +7,36 @@
         <colored-text colorType="tealType" size="45px" weight="bold">
           Verna Beltran Salangsang
         </colored-text>
-        <Typer
-          :text="[
-            'a game developer',
-            'a digital artist',
-            'a software developer',
-            'a volunteer game & system tester',
-            'a video game enthusiast',
-          ]"
-          :style="{
-            '--char-typed-color': secondaryColor,
-            '--caret-idle-color': secondaryColor,
-            '--caret-typing-color': secondaryColor,
-            '--caret-selecting-color': secondaryColor,
-            '--caret-erasing-color': secondaryColor,
-            '--caret-complete-color': secondaryColor,
-            '--char-selected-color': primaryText,
-            '--char-selected-background-color': secondaryColor,
-          }"
-        />
+        <div class="d-flex flex-row ml-auto">
+          <colored-text>I'm a&nbsp;</colored-text>
+          <Typer
+            :text="[
+              'game developer',
+              'digital artist',
+              'software developer',
+              'volunteer game & system tester',
+              'video game enthusiast',
+              'gym rat',
+            ]"
+            :style="{
+              '--char-typed-color': secondaryColor,
+              '--caret-idle-color': secondaryColor,
+              '--caret-typing-color': secondaryColor,
+              '--caret-selecting-color': secondaryColor,
+              '--caret-erasing-color': secondaryColor,
+              '--caret-complete-color': secondaryColor,
+              '--char-selected-color': primaryText,
+              '--char-selected-background-color': secondaryColor,
+            }"
+          />
+        </div>
       </div>
       <div class="image-intro col-md-4 d-flex align-items-center">
         <img
           src="../assets/profile.png"
           class="img-fluid"
           alt="Me! ...and my profile picture"
-          width="85%"
+          width="80%"
           oncontextmenu="return false;"
         />
       </div>
