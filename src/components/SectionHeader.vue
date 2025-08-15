@@ -39,8 +39,6 @@ export default {
 
     ctx.fillStyle = this.secondaryColor
     ctx.fillRect(0, 0, canvasWidth, 1)
-
-    console.log(this.isSubheader)
   },
 }
 </script>

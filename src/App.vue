@@ -16,7 +16,7 @@
     <div id="project" class="project container">
       <section-header>Projects</section-header>
       <div class="project-list container">
-        <!-- table: 2 columns, noOfProj/2 rows -->
+        <project-table />
       </div>
     </div>
     <div id="skill" class="skill container">
@@ -39,6 +39,7 @@ import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
 import SectionHeader from './components/SectionHeader.vue'
 import WorkExperience from './components/WorkExperience.vue'
+import ProjectTable from './components/ProjectTable.vue'
 
 import jsonData from './assets/data.json'
 
@@ -49,6 +50,7 @@ export default {
     HomeComponent,
     SectionHeader,
     WorkExperience,
+    ProjectTable,
   },
   data() {
     return {
