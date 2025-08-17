@@ -16,7 +16,7 @@
     <div id="project" class="project container">
       <section-header>Projects</section-header>
       <div class="project-list container">
-        <project-table />
+        <project-table :project-data="projData" />
       </div>
     </div>
     <div id="skill" class="skill container">

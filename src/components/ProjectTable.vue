@@ -4,17 +4,22 @@
       <div
         v-for="(proj, projIndex) in row"
         :key="'proj-' + rowIndex + '-' + projIndex"
-        class="project-item flex-fill"
+        class="project-item flex-fill p-3"
       >
-        {{ proj.name }}
+        <project-box :proj="proj" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ProjectBox from './ProjectBox.vue'
+
 export default {
   name: 'ProjectTable',
+  components: {
+    ProjectBox,
+  },
   props: {
     projectData: {
       type: Array,
@@ -22,7 +27,7 @@ export default {
         {
           name: 'testName',
           desc: 'long ass description',
-          imgPath: '',
+          imgPath: new URL('@/assets/placeholder.png', import.meta.url).href,
           type: 'testType',
           isWIP: true,
           toolsUsed: ['Tool1', 'Tool2'],
@@ -30,8 +35,8 @@ export default {
         {
           name: 'anotherTest',
           desc: 'long ass description',
-          imgPath: '',
-          type: 'testType',
+          imgPath: new URL('@/assets/placeholder.png', import.meta.url).href,
+          type: 'idk man',
           isWIP: false,
           toolsUsed: ['Tool1', 'Tool2'],
         },

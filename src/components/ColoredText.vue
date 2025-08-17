@@ -38,4 +38,9 @@ export default {
 .importantType {
   color: $important-color;
 }
+.colored-text {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 </style>

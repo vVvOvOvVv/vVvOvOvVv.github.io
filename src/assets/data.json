@@ -30,7 +30,7 @@
       "name": "Recreation of Lightner's Live",
       "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game. I aim to recreate this segment, with a few additions of my own, such as additional songs, a slightly different approach to song/map difficulty, and more. GitHub: https://github.com/vVvOvOvVv/Lightners-Live",
       "imgPath": "",
-      "type": "Game Dev",
+      "type": "Game",
       "isWIP": true,
       "toolsUsed": ["Godot", "GDScript", "GitHub", "DAW", "aseprite"]
     },
@@ -38,25 +38,33 @@
       "name": "FPS Prototype - Graveborn",
       "desc": "Within a month, I have developed a small-scale game in a group of 5 people, with me leading the overall design and development of the game. We split the work by level design, enemy AI development, menus/UI, and other tasks amongst ourselves. We utilized Unity 3D to develop the game, using free public assets for the game, including character models, animations, particle effects, and VFX.",
       "imgPath": "",
-      "type": "Game Dev",
+      "type": "Game",
       "isWIP": false,
-      "toolsUsed": ["Unity", "C#", "GitHub"]
+      "toolsUsed": ["Unity3D", "C#", "GitHub"]
     },
     {
       "name": "VR Room",
       "desc": "A group project of a room in VR made in Unity. This project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done through a Meta Quest 3.",
       "imgPath": "",
-      "type": "Game Dev (VR)",
+      "type": "Game",
       "isWIP": false,
       "toolsUsed": ["Unity", "C#", "Meta Quest 3"]
     },
     {
       "name": "vVvOvOvVv.github.io",
-      "desc": "Created as a way to showcase my projects, and brush up on web development, I present this website!",
+      "desc": "Created as a way to showcase my projects, and brush up on Web, I present this website!",
       "imgPath": "",
-      "type": "Web Development",
+      "type": "Web",
       "isWIP": false,
-      "toolsUsed": ["Vue 3", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "VS Code"]
+      "toolsUsed": ["Vue3", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "VS Code"]
+    },
+    {
+      "name": "Deltarune Cursors",
+      "desc": "Using aseprite, I created my own set of cursors, featuring several characters from Deltarune, allowing fans to change their own cursors into custom ones! Avaiable for free on my Ko-Fi :)",
+      "imgPath": "",
+      "type": "Art",
+      "isWIP": false,
+      "toolsUsed": ["aseprite"]
     }
   ],
   "skills": [
