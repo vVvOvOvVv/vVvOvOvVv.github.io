@@ -3,7 +3,10 @@
     <div class="row">
       <div class="name-desc col-md-6 d-flex flex-column align-items-start p-3">
         <colored-text color-type="tealType" size="30px" weight="bold">{{ proj.name }}</colored-text>
-        <colored-text color-type="tealType">{{ proj.desc }}</colored-text>
+        <colored-text class="m-1" color-type="tealType">{{ proj.desc }}</colored-text>
+        <project-tag v-if="hasLink" :is-link="true" :link="proj.externalLink">
+          {{ proj.linkLabel }}
+        </project-tag>
       </div>
       <div class="col-md-6 p-3">
         <img class="proj-img rounded" :src="resolvedImg" oncontextmenu="return false;" />
@@ -51,6 +54,9 @@ export default {
       return this.proj.imgPath
         ? new URL(`../assets/project_previews/${this.proj.imgPath}`, import.meta.url).href
         : new URL('../assets/placeholder.png', import.meta.url).href
+    },
+    hasLink() {
+      return this.proj.externalLink ? true : false
     },
   },
 }

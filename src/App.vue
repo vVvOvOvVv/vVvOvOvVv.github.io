@@ -75,4 +75,7 @@ html,
   background-color: $background-color;
   font-size: 20px;
 }
+a {
+  text-decoration: none !important;
+}
 </style>

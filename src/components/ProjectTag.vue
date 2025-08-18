@@ -1,9 +1,12 @@
 <template>
   <div
-    class="proj-tag rounded-pill p-1 px-2 d-flex flex-row align-items-center justify-content-center"
-    :class="{ 'type-tag': isType, 'wip-tag': isWip }"
+    class="proj-tag rounded-pill p-1 px-3 d-flex flex-row align-items-center justify-content-center"
+    :class="{ 'type-tag': isType, 'wip-tag': isWip, 'link-tag': isLink }"
   >
-    <colored-text weight="bold"> <slot /> </colored-text>
+    <a v-if="isLink" :href="link">
+      <colored-text weight="bold"> <slot /> </colored-text>
+    </a>
+    <colored-text v-else weight="bold"> <slot /> </colored-text>
   </div>
 </template>
 
@@ -24,6 +27,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    isLink: {
+      type: Boolean,
+      default: false,
+    },
+    link: {
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
@@ -33,7 +44,8 @@ export default {
 .proj-tag {
   background-color: $primary-color;
 }
-.type-tag {
+.type-tag,
+.link-tag {
   background-color: $secondary-color;
 }
 .wip-tag {

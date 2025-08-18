@@ -28,12 +28,13 @@
   "projects": [
     {
       "name": "Recreation of Lightner's Live",
-      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game. I aim to recreate this segment, with a few additions of my own, such as additional songs, a slightly different approach to song/map difficulty, and more. GitHub: https://github.com/vVvOvOvVv/Lightners-Live",
+      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game. I aim to recreate this segment, with a few additions of my own, such as additional songs, a slightly different approach to song/map difficulty, and more.",
       "imgPath": "lightners-live.png",
       "type": "Game",
       "isWIP": true,
       "toolsUsed": ["Godot", "GDScript", "GitHub", "DAW", "aseprite"],
-      "externalLink": ""
+      "externalLink": "https://github.com/vVvOvOvVv/Lightners-Live",
+      "linkLabel": "GitHub Link"
     },
     {
       "name": "FPS Prototype - Graveborn",
@@ -42,25 +43,28 @@
       "type": "Game",
       "isWIP": false,
       "toolsUsed": ["Unity3D", "C#", "GitHub"],
-      "externalLink": ""
+      "externalLink": "https://github.com/vVvOvOvVv/Graveborn",
+      "linkLabel": "GitHub Link"
     },
     {
       "name": "VR Room",
-      "desc": "A group project of a room in VR made in Unity. This project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator.",
-      "imgPath": "",
+      "desc": "A group project of a room in VR made in Unity. This project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
+      "imgPath": "vr.png",
       "type": "Game",
       "isWIP": false,
       "toolsUsed": ["Unity", "C#", "Meta Quest 3", "Blender"],
-      "externalLink": ""
+      "externalLink": "https://github.com/dini3/CSCI388",
+      "linkLabel": "GitHub Link"
     },
     {
       "name": "Developer Portfolio",
-      "desc": "Created as a way to showcase my projects, and brush up on Web, I present this website!",
-      "imgPath": "",
+      "desc": "Created as a way to showcase my projects, and brush up on Web, I present this website! Initial planning/prototyping done using Miro, and coded entirely on VS Code.",
+      "imgPath": "portfolio.png",
       "type": "Web",
       "isWIP": false,
       "toolsUsed": ["Vue3", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "VS Code"],
-      "externalLink": ""
+      "externalLink": "https://github.com/vVvOvOvVv/vVvOvOvVv.github.io",
+      "linkLabel": "GitHub Link"
     },
     {
       "name": "Deltarune Cursors",
@@ -69,7 +73,8 @@
       "type": "Art",
       "isWIP": false,
       "toolsUsed": ["aseprite"],
-      "externalLink": ""
+      "externalLink": "https://ko-fi.com/vvvv_v/shop",
+      "linkLabel": "Ko-Fi Link"
     }
   ],
   "skills": [
