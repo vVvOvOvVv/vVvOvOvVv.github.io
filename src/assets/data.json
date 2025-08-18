@@ -28,7 +28,7 @@
   "projects": [
     {
       "name": "Recreation of Lightner's Live",
-      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game. I aim to recreate this segment, with a few additions of my own, such as additional songs, a slightly different approach to song/map difficulty, and more.",
+      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game.\n\nI aim to recreate this segment of the game with a few extra additions of my own, such as additional songs, compatibility with Lightners Live Plus custom maps, a slightly different approach to song/map difficulty, and more.",
       "imgPath": "lightners-live.png",
       "type": "Game",
       "isWIP": true,
@@ -48,7 +48,7 @@
     },
     {
       "name": "VR Room",
-      "desc": "A group project of a room in VR made in Unity. This project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
+      "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control.Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
       "imgPath": "vr.png",
       "type": "Game",
       "isWIP": false,
@@ -58,7 +58,7 @@
     },
     {
       "name": "Developer Portfolio",
-      "desc": "Created as a way to showcase my projects, and brush up on Web, I present this website! Initial planning/prototyping done using Miro, and coded entirely on VS Code.",
+      "desc": "Created as a way to showcase my projects, and brush up on Web Development, I present this website!\n\nInitial planning and prototyping done using Miro, and coded entirely on VS Code.",
       "imgPath": "portfolio.png",
       "type": "Web",
       "isWIP": false,
@@ -67,8 +67,8 @@
       "linkLabel": "GitHub Link"
     },
     {
-      "name": "Deltarune Cursors",
-      "desc": "Using aseprite, I created my own set of cursors, featuring several characters from Deltarune, allowing fans to change their own cursors into custom ones! Avaiable for free on my Ko-Fi :)",
+      "name": "Custom Deltarune Cursors",
+      "desc": "Using aseprite, I created my own set of cursors, featuring several characters from Deltarune, allowing fans to change their own cursors into custom ones! Avaiable for free on my Ko-Fi, with more to come in the future :)",
       "imgPath": "cursors.png",
       "type": "Art",
       "isWIP": false,
@@ -142,7 +142,7 @@
       ]
     }
   ],
-  "aboutMe": "",
+  "aboutMe": "test test \n break test",
   "socials": [
     {
       "name": "Instagram",

@@ -1,6 +1,10 @@
 <!-- Only for non-interactable text (i.e. not links) -->
 <template>
-  <div class="colored-text" :class="[colorType]" :style="{ fontSize: size, fontWeight: weight }">
+  <div
+    class="colored-text"
+    :class="[colorType]"
+    :style="{ fontSize: size, fontWeight: weight, whiteSpace: 'pre-wrap' }"
+  >
     <slot />
     <!-- ensure contents are within the div -->
   </div>

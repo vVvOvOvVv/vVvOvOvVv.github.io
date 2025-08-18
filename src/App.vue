@@ -25,7 +25,9 @@
     </div>
     <div id="about" class="about container">
       <section-header>About Me</section-header>
-      <div class="about-desc container"></div>
+      <div class="about-desc container">
+        <colored-text> {{ aboutData }} </colored-text>
+      </div>
     </div>
     <div class="socials container">
       <section-header :is-subheader="true">Where you can find me</section-header>
@@ -40,6 +42,7 @@ import HomeComponent from './components/Home.vue'
 import SectionHeader from './components/SectionHeader.vue'
 import WorkExperience from './components/WorkExperience.vue'
 import ProjectTable from './components/ProjectTable.vue'
+import ColoredText from './components/ColoredText.vue'
 
 import jsonData from './assets/data.json'
 
@@ -51,6 +54,7 @@ export default {
     SectionHeader,
     WorkExperience,
     ProjectTable,
+    ColoredText,
   },
   data() {
     return {
