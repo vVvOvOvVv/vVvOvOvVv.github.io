@@ -6,7 +6,7 @@
         <colored-text color-type="tealType">{{ proj.desc }}</colored-text>
       </div>
       <div class="col-md-6 p-3">
-        <img class="proj-img rounded" :src="proj.imgPath" oncontextmenu="return false;" />
+        <img class="proj-img rounded" :src="resolvedImg" oncontextmenu="return false;" />
         <div class="row">
           <div class="proj-type col-md-6 p-3">
             <project-tag :is-type="true">{{ proj.type }}</project-tag>
@@ -44,6 +44,13 @@ export default {
         isWIP: true,
         toolsUsed: ['Tool1', 'Tool2'],
       }),
+    },
+  },
+  computed: {
+    resolvedImg() {
+      return this.proj.imgPath
+        ? new URL(`../assets/project_previews/${this.proj.imgPath}`, import.meta.url).href
+        : new URL('../assets/placeholder.png', import.meta.url).href
     },
   },
 }

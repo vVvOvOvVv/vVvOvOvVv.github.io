@@ -27,7 +27,7 @@ export default {
         {
           name: 'testName',
           desc: 'long ass description',
-          imgPath: new URL('@/assets/placeholder.png', import.meta.url).href,
+          imgPath: '',
           type: 'testType',
           isWIP: true,
           toolsUsed: ['Tool1', 'Tool2'],
@@ -35,7 +35,7 @@ export default {
         {
           name: 'anotherTest',
           desc: 'long ass description',
-          imgPath: new URL('@/assets/placeholder.png', import.meta.url).href,
+          imgPath: '',
           type: 'idk man',
           isWIP: false,
           toolsUsed: ['Tool1', 'Tool2'],
