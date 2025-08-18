@@ -26,7 +26,7 @@
     <div id="about" class="about container">
       <section-header>About Me</section-header>
       <div class="about-desc container">
-        <colored-text> {{ aboutData }} </colored-text>
+        <colored-text class="m-5"> {{ aboutData }} </colored-text>
       </div>
     </div>
     <div class="socials container">
