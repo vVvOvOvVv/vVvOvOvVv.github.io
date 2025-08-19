@@ -44,9 +44,15 @@ export default {
 .proj-tag {
   background-color: $primary-color;
 }
-.type-tag,
+.type-tag {
+  background-color: $secondary-color;
+}
 .link-tag {
   background-color: $secondary-color;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .wip-tag {
   background-color: $important-color;

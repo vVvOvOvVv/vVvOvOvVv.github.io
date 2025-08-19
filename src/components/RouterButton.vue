@@ -48,6 +48,10 @@ export default {
   border: none;
   outline: none;
   box-shadow: none;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .directory-btn {
   color: $primary-text;
@@ -55,8 +59,9 @@ export default {
   border: none;
   outline: none;
   box-shadow: none;
-}
-.directory-btn:hover {
-  background-color: $transparent-primary-color;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 </style>

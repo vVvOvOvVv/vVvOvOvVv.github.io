@@ -21,7 +21,14 @@
     </div>
     <div id="skill" class="skill container">
       <section-header>Skills & Tools</section-header>
-      <div class="skill-cat-list container"></div>
+      <div class="skill-cat-list container">
+        <skills-sub-section
+          subsection-name="Programming Languages"
+          :skill-array="programmingLangData"
+        />
+        <skills-sub-section subsection-name="Art & Design" :skill-array="artDesignData" />
+        <skills-sub-section subsection-name="Development Tools" :skill-array="toolsData" />
+      </div>
     </div>
     <div id="about" class="about container">
       <section-header>About Me</section-header>
@@ -32,7 +39,7 @@
     <div class="socials container">
       <section-header :is-subheader="true">Where you can find me</section-header>
       <div class="social-list container d-flex flex-row">
-        <link-box v-for="link in socialData" :key="link" :link="link" />
+        <link-box v-for="link in socialData" :key="link.name" :link="link" />
       </div>
     </div>
   </div>
@@ -44,6 +51,7 @@ import HomeComponent from './components/Home.vue'
 import SectionHeader from './components/SectionHeader.vue'
 import WorkExperience from './components/WorkExperience.vue'
 import ProjectTable from './components/ProjectTable.vue'
+import SkillsSubSection from './components/SkillsSubSection.vue'
 import LinkBox from './components/LinkBox.vue'
 import ColoredText from './components/ColoredText.vue'
 
@@ -57,6 +65,7 @@ export default {
     SectionHeader,
     WorkExperience,
     ProjectTable,
+    SkillsSubSection,
     LinkBox,
     ColoredText,
   },

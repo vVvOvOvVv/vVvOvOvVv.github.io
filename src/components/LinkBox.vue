@@ -1,9 +1,11 @@
 <template>
-  <div
-    class="link-box m-3 p-2 rounded-4 d-flex flex-column align-items-center justify-content-center"
-  >
-    <a :href="link.refLink"> <img class="link-img" :src="resolvedImg" width="70px" /></a>
-  </div>
+  <a :href="resolvedLink" target="_blank" rel="noopener noreferrer">
+    <div
+      class="link-box mb-2 mx-2 p-2 rounded-4 d-flex flex-column align-items-center justify-content-center"
+    >
+      <img class="link-img" :src="resolvedImg" :alt="link.name" width="50px" />
+    </div>
+  </a>
 </template>
 
 <script>
@@ -15,7 +17,7 @@ export default {
       default: () => ({
         name: 'placeholder',
         imgPath: '',
-        refLink: 'https://tenor.com/view/cat-rotating-rotating-cat-gif-27069837',
+        refLink: '',
       }),
     },
   },
@@ -24,6 +26,11 @@ export default {
       return this.link.imgPath
         ? new URL(`../assets/icons/${this.link.imgPath}`, import.meta.url).href
         : new URL('../assets/placeholder.png', import.meta.url).href
+    },
+    resolvedLink() {
+      return this.link.refLink
+        ? this.link.refLink
+        : 'https://media.tenor.com/0EDznml5BDAAAAAj/cat-spinning.gif'
     },
   },
 }
@@ -34,5 +41,9 @@ export default {
 
 .link-box {
   background-color: $primary-color;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 </style>
