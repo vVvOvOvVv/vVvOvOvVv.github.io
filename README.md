@@ -1,35 +1,60 @@
-# interface
+# Developer Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+A personal portfolio website showcasing my projects, skills, and work experience. Built with **Vue 3**, **Vite**, and **Bootstrap**, this website presents interactive project previews, skill sections, and external links to work and social profiles.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Table of Contents
 
-## Customize configuration
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Future Plans](#future-plans)
+- [Technologies Used](#technologies-used)
+- [License](#license)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## About the Project
 
-```sh
-npm install
-```
+This portfolio website is designed to showcase my skills, projects, and professional background. It includes:
 
-### Compile and Hot-Reload for Development
+- Interactive project cards with descriptions, images, and links
+- Categorized skill sections with clickable skill icons
+- Work experience and educational background
+- Links to social profiles
 
-```sh
-npm run dev
-```
+It serves both as a demonstration of my **front-end development skills** and as a professional presentation for recruiters or collaborators.
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+## Features
 
-### Lint with [ESLint](https://eslint.org/)
+- **Projects Section**: Displays my games, web, and art projects with images, descriptions, tools used, and WIP indicators.
+- **Skills Section**: Organized by Programming Languages, Art & Design, and Development Tools, each with clickable icons linking to official documentation or tools.
+- **Responsive Design**: Fully responsive using Bootstrap grid and utility classes.
+- **Custom Components**: Reusable Vue components like `ProjectBox`, `SkillsSubSection`, `ColoredText`, and `LinkBox`.
+- **Dynamic Data**: All projects and skills loaded from a JSON data file for easy maintenance.
 
-```sh
-npm run lint
-```
+---
+
+## Future Plans
+
+As of right now, this portfolio is only fully functioning and structured as intended on desktop and not mobile devices.
+The next version will aim to resolve this, as well as update the project list as necessary. 
+
+--
+
+## Technologies Used
+
+- Vue 3 – Frontend framework
+- Vite – Build tool
+- Bootstrap 5 – Layouts and utility classes
+- SCSS – Styling
+- JSON – Data storage for projects and skills
+- GitHub Pages – Hosting
+
+--
+
+## License
+
+This project is open-source and available under the MIT License
