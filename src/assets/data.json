@@ -82,38 +82,43 @@
       "programmingLang": [
         {
           "name": "HTML",
-          "imgPath": "",
-          "refLink": ""
+          "imgPath": "html.png",
+          "refLink": "https://developer.mozilla.org/en-US/docs/Web/HTML"
         },
         {
           "name": "JavaScript",
-          "imgPath": "",
-          "refLink": ""
+          "imgPath": "javascript.png",
+          "refLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         },
         {
           "name": "CSS",
-          "imgPath": "",
-          "refLink": ""
+          "imgPath": "css.png",
+          "refLink": "https://www.w3.org/Style/CSS/Overview.en.html"
         },
         {
           "name": "C#",
-          "imgPath": "",
-          "refLink": ""
+          "imgPath": "https://dotnet.microsoft.com/en-us/languages/csharp",
+          "refLink": "csharp.png"
         },
         {
           "name": "GDScript",
-          "imgPath": "",
-          "refLink": ""
+          "imgPath": "godot.png",
+          "refLink": "https://gdscript.com"
         }
       ],
       "artAndDesign": [
         {
           "name": "Procreate",
-          "imgPath": "",
-          "refLink": ""
+          "imgPath": "procreate.png",
+          "refLink": "https://procreate.com"
         },
         {
           "name": "aseprite",
+          "imgPath": "aseprite.png",
+          "refLink": "https://www.aseprite.org"
+        },
+        {
+          "name": "Blender",
           "imgPath": "",
           "refLink": ""
         }
@@ -142,32 +147,32 @@
       ]
     }
   ],
-  "aboutMe": "Born in the Philippines and raised (and currently residing in!) Macau SAR, I'm a graduate from the University of Wollongong, with a degree in Game & Mobile Development with Distinction. I've working with Android Studio and Unity in university, and am currently working on a personal project using Godot. I love experimenting with new ideas and learning new skills, both relevant and irrelevant to my field!\n\nIn my free time, I create lots of art, and have recently been experimenting with pixel art. I also enjoy bouldering, weightlifting, and gaming! Feel free to throw me any roguelike suggestions!",
+  "aboutMe": "Born in the Philippines and raised (and currently residing in!) Macau SAR, I'm a graduate from the University of Wollongong, with a degree in Game & Mobile Development with Distinction. I've working with Android Studio and Unity in university, and am currently working on a personal project using Godot. I love experimenting with new ideas and learning new skills, both relevant and irrelevant to my field!\n\nIn my free time, I create lots of art, and have recently been experimenting with pixel art. I post the majority of my artwork as well as some WIPs on both Instagram and BlueSky! I also enjoy bouldering, weightlifting, and gaming! Feel free to throw me any roguelike suggestions!",
   "socials": [
     {
       "name": "Instagram",
-      "imgPath": "",
-      "refLink": ""
+      "imgPath": "instagram.png",
+      "refLink": "https://www.instagram.com/v.vovov.v"
     },
     {
       "name": "BlueSky",
-      "imgPath": "",
-      "refLink": ""
+      "imgPath": "bluesky.png",
+      "refLink": "https://bsky.app/profile/vvovovv.bsky.social"
     },
     {
       "name": "Cara",
-      "imgPath": "",
-      "refLink": ""
+      "imgPath": "cara.png",
+      "refLink": "https://cara.app/vvvvv"
     },
     {
       "name": "LinkedIn",
-      "imgPath": "",
-      "refLink": ""
+      "imgPath": "linkedin.png",
+      "refLink": "https://www.linkedin.com/in/verna-beltran-salangsang"
     },
     {
       "name": "GitHub",
-      "imgPath": "",
-      "refLink": ""
+      "imgPath": "github.png",
+      "refLink": "https://github.com/vVvOvOvVv"
     }
   ]
 }

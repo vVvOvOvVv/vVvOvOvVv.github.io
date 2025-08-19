@@ -31,7 +31,9 @@
     </div>
     <div class="socials container">
       <section-header :is-subheader="true">Where you can find me</section-header>
-      <div class="social-list container"></div>
+      <div class="social-list container d-flex flex-row">
+        <link-box v-for="link in socialData" :key="link" :link="link" />
+      </div>
     </div>
   </div>
 </template>
@@ -42,6 +44,7 @@ import HomeComponent from './components/Home.vue'
 import SectionHeader from './components/SectionHeader.vue'
 import WorkExperience from './components/WorkExperience.vue'
 import ProjectTable from './components/ProjectTable.vue'
+import LinkBox from './components/LinkBox.vue'
 import ColoredText from './components/ColoredText.vue'
 
 import jsonData from './assets/data.json'
@@ -54,6 +57,7 @@ export default {
     SectionHeader,
     WorkExperience,
     ProjectTable,
+    LinkBox,
     ColoredText,
   },
   data() {
