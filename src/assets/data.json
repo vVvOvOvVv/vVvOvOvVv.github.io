@@ -48,7 +48,7 @@
     },
     {
       "name": "VR Room",
-      "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control.Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
+      "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
       "imgPath": "vr.png",
       "type": "Game",
       "isWIP": false,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Custom Deltarune Cursors",
-      "desc": "Using aseprite, I created my own set of cursors, featuring several characters from Deltarune, allowing fans to change their own cursors into custom ones! Avaiable for free on my Ko-Fi, with more to come in the future :)",
+      "desc": "Using aseprite, I created my own set of cursors, featuring several characters from Deltarune, allowing fans to change their own cursors into custom ones! Available for free on my Ko-Fi, with more to come in the future :)",
       "imgPath": "cursors.png",
       "type": "Art",
       "isWIP": false,
