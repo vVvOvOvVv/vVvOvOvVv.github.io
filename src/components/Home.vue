@@ -25,7 +25,7 @@
               '--caret-complete-color': secondaryColor,
               '--char-selected-color': primaryText,
               '--char-selected-background-color': secondaryColor,
-              fontSize: '1.5vw',
+              fontSize: '1.8vw',
             }"
           />
         </div>
@@ -33,7 +33,7 @@
       <div class="image-intro col-md-4 d-flex align-items-center">
         <img
           src="../assets/profile.png"
-          class="img-fluid"
+          class="img-fluid m-2"
           alt="Me! ...and my profile picture"
           width="80%"
           oncontextmenu="return false;"
