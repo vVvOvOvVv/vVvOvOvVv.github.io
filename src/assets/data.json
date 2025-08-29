@@ -171,6 +171,11 @@
       "name": "GitHub",
       "imgPath": "github.png",
       "refLink": "https://github.com/vVvOvOvVv"
+    },
+    {
+      "name": "Ko-Fi",
+      "imgPath": "kofi.png",
+      "refLink": "https://ko-fi.com/vvvv_v"
     }
   ]
 }

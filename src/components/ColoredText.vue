@@ -20,7 +20,7 @@ export default {
     },
     size: {
       type: String,
-      default: '1.5vw',
+      default: '1.45vw',
     },
     weight: {
       type: String,

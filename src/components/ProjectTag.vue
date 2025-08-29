@@ -3,7 +3,7 @@
     class="proj-tag rounded-pill p-1 px-3 d-flex flex-row align-items-center justify-content-center"
     :class="{ 'type-tag': isType, 'wip-tag': isWip, 'link-tag': isLink }"
   >
-    <a v-if="isLink" :href="link">
+    <a v-if="isLink" :href="link" target="_blank" rel="noopener noreferrer">
       <colored-text weight="bold"> <slot /> </colored-text>
     </a>
     <colored-text v-else weight="bold"> <slot /> </colored-text>
