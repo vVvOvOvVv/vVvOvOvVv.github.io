@@ -1,7 +1,7 @@
 <template>
   <div class="skills-subsection">
     <section-header :is-subheader="true"> {{ subsectionName }} </section-header>
-    <div class="skill-list d-flex flex-row">
+    <div class="skill-list d-flex flex-row flex-wrap">
       <link-box v-for="skill in skillArray" :key="skill.name" :link="skill" />
     </div>
   </div>
