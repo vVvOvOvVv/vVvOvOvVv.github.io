@@ -4,9 +4,7 @@
       <div class="brief-intro col-md-8 d-flex flex-column align-items-start">
         <!-- flex-column changes flex direction to vertical -->
         <colored-text>Hey there! I'm</colored-text>
-        <colored-text colorType="tealType" size="45px" weight="bold">
-        Verna Beltran Salangsang
-        </colored-text>
+        <colored-text colorType="tealType" size="3vw" weight="bold">Verna Beltran Salangsang</colored-text>
         <div class="d-flex flex-row ml-auto">
           <colored-text>I'm a&nbsp;</colored-text>
           <Typer
@@ -27,6 +25,7 @@
               '--caret-complete-color': secondaryColor,
               '--char-selected-color': primaryText,
               '--char-selected-background-color': secondaryColor,
+              fontSize: '1.5vw',
             }"
           />
         </div>

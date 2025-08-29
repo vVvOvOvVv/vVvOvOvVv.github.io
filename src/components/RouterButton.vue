@@ -48,6 +48,7 @@ export default {
   border: none;
   outline: none;
   box-shadow: none;
+  font-size: 1.5vw;
 
   &:hover {
     transform: scale(1.05);
@@ -59,6 +60,7 @@ export default {
   border: none;
   outline: none;
   box-shadow: none;
+  font-size: 1.5vw;
 
   &:hover {
     transform: scale(1.05);
