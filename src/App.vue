@@ -36,11 +36,8 @@
         <colored-text class="m-5"> {{ aboutData }} </colored-text>
       </div>
     </div>
-    <div class="socials container">
-      <section-header :is-subheader="true">Where you can find me</section-header>
-      <div class="social-list container d-flex flex-row">
-        <link-box v-for="link in socialData" :key="link.name" :link="link" />
-      </div>
+    <div class="socials container mb-5">
+        <skills-sub-section subsection-name="Where you can find me" :skill-array="socialData" />
     </div>
   </div>
 </template>
@@ -52,7 +49,6 @@ import SectionHeader from './components/SectionHeader.vue'
 import WorkExperience from './components/WorkExperience.vue'
 import ProjectTable from './components/ProjectTable.vue'
 import SkillsSubSection from './components/SkillsSubSection.vue'
-import LinkBox from './components/LinkBox.vue'
 import ColoredText from './components/ColoredText.vue'
 
 import jsonData from './assets/data.json'
@@ -66,7 +62,6 @@ export default {
     WorkExperience,
     ProjectTable,
     SkillsSubSection,
-    LinkBox,
     ColoredText,
   },
   data() {
