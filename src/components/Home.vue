@@ -5,7 +5,7 @@
         <!-- flex-column changes flex direction to vertical -->
         <colored-text>Hey there! I'm</colored-text>
         <colored-text colorType="tealType" size="45px" weight="bold">
-          Verna Beltran Salangsang
+        Verna Beltran Salangsang
         </colored-text>
         <div class="d-flex flex-row ml-auto">
           <colored-text>I'm a&nbsp;</colored-text>

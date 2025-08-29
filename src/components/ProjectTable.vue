@@ -1,13 +1,11 @@
 <template>
   <div class="project-table container">
-    <div v-for="(row, rowIndex) in projectRows" :key="'row-' + rowIndex" class="d-flex">
-      <div
-        v-for="(proj, projIndex) in row"
-        :key="'proj-' + rowIndex + '-' + projIndex"
-        class="project-item flex-fill p-3"
-      >
-        <project-box :proj="proj" />
-      </div>
+    <div
+      v-for="(proj, projIndex) in projectData"
+      :key="'proj-' + projIndex"
+      class="project-item p-3"
+    >
+      <project-box :proj="proj" />
     </div>
   </div>
 </template>
@@ -43,16 +41,19 @@ export default {
       ],
     },
   },
-  computed: {
-    projectRows() {
-      const rows = []
-      for (let i = 0; i < this.projectData.length; i += 2) {
-        rows.push(this.projectData.slice(i, i + 2))
-      }
-      return rows
-    },
-  },
 }
 </script>
 
-<style></style>
+<style scoped>
+.project-table {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 per row by default */
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-table {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+</style>
