@@ -1,6 +1,6 @@
 <template>
   <div class="section-header container d-flex flex-column mb-3">
-    <colored-text :size="isSubheader ? '2.5vw' : '3.5vw'" weight="bold">
+    <colored-text :size="isSubheader ? '24px' : '35px'" weight="bold">
       <slot />
     </colored-text>
     <canvas id="header-partition" ref="canvasElement" width="200" height="1"></canvas>

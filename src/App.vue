@@ -40,6 +40,7 @@
         <skills-sub-section subsection-name="Where you can find me" :skill-array="socialData" />
     </div>
   </div>
+  <footer-bar />
 </template>
 
 <script>
@@ -50,6 +51,7 @@ import WorkExperience from './components/WorkExperience.vue'
 import ProjectTable from './components/ProjectTable.vue'
 import SkillsSubSection from './components/SkillsSubSection.vue'
 import ColoredText from './components/ColoredText.vue'
+import FooterBar from './components/FooterBar.vue'
 
 import jsonData from './assets/data.json'
 
@@ -63,6 +65,7 @@ export default {
     ProjectTable,
     SkillsSubSection,
     ColoredText,
+    FooterBar,
   },
   data() {
     return {

@@ -20,7 +20,7 @@ export default {
     },
     size: {
       type: String,
-      default: '1.8vw',
+      default: '16px',
     },
     weight: {
       type: String,

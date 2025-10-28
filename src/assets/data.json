@@ -1,10 +1,16 @@
 {
   "workAndExperience": [
     {
+      "company": "Sands China Ltd.",
+      "title": "Developer - Casino Systems & Gaming Development",
+      "startDate": "Nov 2025",
+      "endDate": "Present"
+    },
+    {
       "company": "Truffle",
       "title": "Volunteer Web Browser Alpha Tester (UX)",
       "startDate": "Jan 2025",
-      "endDate": "Present"
+      "endDate": "Jun 2025"
     },
     {
       "company": "Lionbridge Technologies",
@@ -50,7 +56,7 @@
       "name": "VR Room",
       "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
       "imgPath": "vr.png",
-      "type": "Game",
+      "type": "VR",
       "isWIP": false,
       "toolsUsed": ["Unity", "C#", "Meta Quest 3", "Blender"],
       "externalLink": "https://github.com/dini3/CSCI388",

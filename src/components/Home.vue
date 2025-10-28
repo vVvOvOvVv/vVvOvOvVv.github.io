@@ -9,6 +9,7 @@
           <colored-text>I'm a&nbsp;</colored-text>
           <Typer
             :text="[
+              'systems developer',
               'game developer',
               'digital artist',
               'software developer',
@@ -25,7 +26,7 @@
               '--caret-complete-color': secondaryColor,
               '--char-selected-color': primaryText,
               '--char-selected-background-color': secondaryColor,
-              fontSize: '1.8vw',
+              fontSize: '16px',
             }"
           />
         </div>

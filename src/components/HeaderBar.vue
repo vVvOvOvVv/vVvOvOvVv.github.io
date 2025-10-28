@@ -15,15 +15,17 @@
 
     <!-- mobile menu button -->
     <button class="ms-auto d-md-none btn" @click="toggleSidebar">
-      <colored-text size="2vw" weight="bold">
+      <colored-text size="24px" weight="bold">
       ☰
       </colored-text>
     </button>
 
     <!-- sidebar -->
     <transition name="slide">
-      <div v-if="sidebarOpen" class="sidebar">
-        <button class="close-btn" @click="toggleSidebar">✕</button>
+      <div v-if="sidebarOpen" class="sidebar flex-container align-items-start">
+        <button class="close-btn" @click="toggleSidebar">
+          <colored-text>✕</colored-text>
+        </button>
         <router-button msg="Work & Experience" :is-page-name="false" target-id="work" @click="toggleSidebar" />
         <router-button msg="Projects" :is-page-name="false" target-id="project" @click="toggleSidebar" />
         <router-button msg="Skills" :is-page-name="false" target-id="skill" @click="toggleSidebar" />
@@ -87,6 +89,19 @@ export default {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Ensure child component buttons (scoped) are affected using deep selector */
+.sidebar ::v-deep .page-btn,
+.sidebar ::v-deep .directory-btn {
+  width: 100%;
+  text-align: left;
+  padding-left: 0.25rem;
+}
+
+/* Also make the router-button root element stretch so its internal div uses full width */
+.sidebar ::v-deep > div {
+  width: 100%;
 }
 
 /* sidebar slide transition */

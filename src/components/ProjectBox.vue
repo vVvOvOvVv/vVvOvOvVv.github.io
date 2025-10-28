@@ -2,7 +2,7 @@
   <div class="project-box container rounded">
     <div class="row">
       <div class="name-desc col-md-6 d-flex flex-column align-items-start p-3">
-        <colored-text color-type="tealType" size="2vw" weight="bold">{{ proj.name }}</colored-text>
+        <colored-text color-type="tealType" size="22px" weight="bold">{{ proj.name }}</colored-text>
         <colored-text class="m-1" color-type="tealType">{{ proj.desc }}</colored-text>
         <project-tag v-if="hasLink" :is-link="true" :link="proj.externalLink">
           {{ proj.linkLabel }}
