@@ -2,15 +2,18 @@
 
 A personal portfolio website showcasing my projects, skills, and work experience. Built with **Vue 3**, **Vite**, and **Bootstrap**, this website presents interactive project previews, skill sections, and external links to work and social profiles.
 
+[![Vue3](https://img.shields.io/badge/JS-Vue3-green)](https://vuejs.org) [![HTML](https://img.shields.io/badge/HTML-red)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
 ---
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Future Plans](#future-plans)
-- [Technologies Used](#technologies-used)
-- [License](#license)
+- [Developer Portfolio](#developer-portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [About the Project](#about-the-project)
+  - [Features](#features)
+  - [Future Plans](#future-plans)
+  - [Technologies Used](#technologies-used)
 
 ---
 
@@ -39,10 +42,10 @@ It serves both as a demonstration of my **front-end development skills** and as 
 
 ## Future Plans
 
-As of right now, this portfolio is only fully functioning and structured as intended on desktop and not mobile devices.
+As of right now, this portfolio is only fully functioning and structured as intended on desktop and not 100% resolved on mobile devices.
 The next version will aim to resolve this, as well as update the project list as necessary. 
 
---
+---
 
 ## Technologies Used
 
@@ -53,8 +56,4 @@ The next version will aim to resolve this, as well as update the project list as
 - JSON – Data storage for projects and skills
 - GitHub Pages – Hosting
 
---
-
-## License
-
-This project is open-source and available under the MIT License
+---
