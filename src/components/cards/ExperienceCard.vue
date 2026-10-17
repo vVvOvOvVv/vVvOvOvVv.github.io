@@ -5,6 +5,9 @@
     </div>
     <div class="experience-details">
       <div>{{ experience.company }} || {{ experience.startDate }} - {{ experience.endDate }} </div>
+      <div v-if="experience.location">
+        {{ experience.location }}
+      </div>
     </div>
   </div>
 </template>
