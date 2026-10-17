@@ -17,7 +17,8 @@
   --navy-blue: #1E3E62;
   --soft-blue: #465C88;
   --orange: #FF7A30;
-  --shadow-60: color-mix(in srgb, var(--dark-blue) 75%, transparent);
+  --shadow-75: color-mix(in srgb, var(--dark-blue) 75%, transparent);
+  --shadow-60: color-mix(in srgb, var(--dark-blue) 60%, transparent);
   --white: #E9E3DF;
 
   --color-background: var(--white);
@@ -29,16 +30,16 @@
   #app {
     background-color: var(--color-background);
     font-size: 20px;
-    font-family: 'Figtree', sans-serif;
   }
 
   a {
-    text-decoration: none;
+    font-family: 'Figtree', sans-serif;
   }
 }
 
 .header-bar {
   background-color: var(--soft-blue);
+  z-index: 20;
 }
 
 .title-text {
@@ -49,7 +50,7 @@
 
   &:hover {
     color: var(--orange);
-    text-shadow: -0.25rem 0.25rem var(--shadow-60);
+    text-shadow: -0.25rem 0.25rem var(--shadow-75);
     cursor: pointer;
   }
 }
@@ -58,18 +59,46 @@
   background-color: var(--soft-blue);
   color: var(--white);
 }
+
 .name-text{
   font-family: 'Climate Crisis', sans-serif;
   font-size: 4rem;
+  font-weight: bold;
   color: var(--orange);
   letter-spacing: 0.2rem;
-  text-shadow: -0.5rem 0.5rem var(--shadow-60);
+  text-shadow: -0.5rem 0.5rem var(--shadow-75);
 }
 
 .section-header {
   font-family: 'Climate Crisis', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--orange);
   letter-spacing: 0.2rem;
-  text-shadow: -0.5rem 0.5rem var(--shadow-60);
+  text-shadow: -0.3rem 0.3rem var(--shadow-75);
+}
+
+.experience-large {
+  font-family: 'Climate Crisis', sans-serif;
+  font-size: 2rem;
+  color: color-mix(in srgb, var(--orange) 70%, transparent);
+}
+
+.experience-details {
+}
+
+.experience-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+  background-color: var(--orange);
+  box-shadow: -0.5rem 0.5rem var(--shadow-60);
+}
+
+.experience-card:hover .experience-large {
+  color: var(--white);
+}
+
+.experience-card:hover .experience-details {
+  font-weight: bolder;
 }

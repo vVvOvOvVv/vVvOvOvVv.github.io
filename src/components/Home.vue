@@ -40,7 +40,7 @@
         <img
           src="../assets/images/profile.jpg"
           alt="Profile Picture"
-          class="h-full w-full rounded-md object-cover"
+          class="h-full w-full rounded-md object-cover pointer-events-none"
         />
       </div>
     </div>

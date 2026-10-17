@@ -2,6 +2,12 @@
   <div class="flex min-h-screen flex-col">
     <header-bar />
     <HomeComponent className="px-40 pt-12" />
+    <div class="px-30 py-12">
+      <ExperienceSection
+        className="mb-12"
+        :workExpData="workExpData"
+      />
+    </div>
     <footer-bar />
   </div>
 </template>
@@ -9,6 +15,7 @@
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
+import ExperienceSection from './components/sections/ExperienceSection.vue';
 import FooterBar from './components/FooterBar.vue'
 
 import jsonData from './assets/data.json'
@@ -18,6 +25,7 @@ export default {
   components: {
     HeaderBar,
     HomeComponent,
+    ExperienceSection,
     FooterBar,
   },
   data() {
