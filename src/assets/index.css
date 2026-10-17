@@ -22,7 +22,6 @@
   --white: #E9E3DF;
 
   --color-background: var(--white);
-  --color-important: var(--orange);
 }
 
 @layer base {
@@ -62,7 +61,7 @@
 
 .name-text{
   font-family: 'Climate Crisis', sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: var(--orange);
   letter-spacing: 0.2rem;
@@ -80,10 +79,11 @@
 .experience-large {
   font-family: 'Climate Crisis', sans-serif;
   font-size: 2rem;
-  color: color-mix(in srgb, var(--orange) 70%, transparent);
+  color: color-mix(in srgb, var(--orange) 80%, transparent);
 }
 
 .experience-details {
+  color: var(--soft-blue);
 }
 
 .experience-card {
@@ -91,7 +91,7 @@
 }
 
 .experience-card:hover {
-  background-color: var(--orange);
+  background-color: var(--soft-blue);
   box-shadow: -0.5rem 0.5rem var(--shadow-60);
 }
 
@@ -101,4 +101,5 @@
 
 .experience-card:hover .experience-details {
   font-weight: bolder;
+  color: var(--white);
 }

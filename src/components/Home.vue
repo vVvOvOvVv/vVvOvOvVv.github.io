@@ -7,7 +7,7 @@
             Hey there! I'm
           </div>
           <div class="name-text whitespace-nowrap">
-            Verna B. Salangsang
+            VERNA B. SALANGSANG
           </div>
         </div>
         <div class="text-2xl">
@@ -68,7 +68,7 @@ export default {
     return {
       blue: '#465C88',
       orange: '#FF7A30',
-      white: '#E9E3DF',
+      white: '#FFFFFF',
     }
   },
 }

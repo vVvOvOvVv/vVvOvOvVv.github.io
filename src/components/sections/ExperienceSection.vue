@@ -2,7 +2,7 @@
   <div :class="`experience-section ${className}`">
     <SectionHeader
       title="Work & Experience"
-      className="mb-6"
+      className="mb-4"
     />
     <div class="experience-list px-6">
       <div
