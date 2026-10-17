@@ -1,12 +1,14 @@
 <template>
-  <div class="header-bar container rounded p-2 pb-1 px-4 d-flex flex-row">
+  <div
+    class="fixed left-0 right-0 top-[5px] z-[1030] mx-auto flex w-full max-w-6xl flex-row rounded bg-primary/60 px-4 pb-1 pt-2"
+  >
     <!-- logo / home button -->
-    <div class="align-items-start">
+    <div class="items-start">
       <router-button target-id="home" />
     </div>
 
     <!-- desktop section buttons -->
-    <div class="ms-auto d-none d-md-flex flex-row gap-3">
+    <div class="ml-auto hidden flex-row gap-3 md:flex">
       <router-button msg="Work & Experience" :is-page-name="false" target-id="work" />
       <router-button msg="Projects" :is-page-name="false" target-id="project" />
       <router-button msg="Skills" :is-page-name="false" target-id="skill" />
@@ -14,22 +16,57 @@
     </div>
 
     <!-- mobile menu button -->
-    <button class="ms-auto d-md-none btn" @click="toggleSidebar">
+    <button class="ml-auto rounded border-0 bg-transparent md:hidden" @click="toggleSidebar">
       <colored-text size="24px" weight="bold">
       ☰
       </colored-text>
     </button>
 
     <!-- sidebar -->
-    <transition name="slide">
-      <div v-if="sidebarOpen" class="sidebar flex-container align-items-start">
-        <button class="close-btn" @click="toggleSidebar">
+    <transition
+      enter-active-class="transition-transform duration-300 ease-out"
+      leave-active-class="transition-transform duration-300 ease-in"
+      enter-from-class="translate-x-full"
+      leave-to-class="translate-x-full"
+    >
+      <div
+        v-if="sidebarOpen"
+        class="fixed right-0 top-0 z-[2000] flex h-full w-60 flex-col items-start gap-4 bg-primary/60 p-4 shadow-lg"
+      >
+        <button
+          class="self-end border-0 bg-transparent text-2xl"
+          @click="toggleSidebar"
+        >
           <colored-text>✕</colored-text>
         </button>
-        <router-button msg="Work & Experience" :is-page-name="false" target-id="work" @click="toggleSidebar" />
-        <router-button msg="Projects" :is-page-name="false" target-id="project" @click="toggleSidebar" />
-        <router-button msg="Skills" :is-page-name="false" target-id="skill" @click="toggleSidebar" />
-        <router-button msg="About Me" :is-page-name="false" target-id="about" @click="toggleSidebar" />
+        <router-button
+          msg="Work & Experience"
+          :is-page-name="false"
+          :full-width="true"
+          target-id="work"
+          @click="toggleSidebar"
+        />
+        <router-button
+          msg="Projects"
+          :is-page-name="false"
+          :full-width="true"
+          target-id="project"
+          @click="toggleSidebar"
+        />
+        <router-button
+          msg="Skills"
+          :is-page-name="false"
+          :full-width="true"
+          target-id="skill"
+          @click="toggleSidebar"
+        />
+        <router-button
+          msg="About Me"
+          :is-page-name="false"
+          :full-width="true"
+          target-id="about"
+          @click="toggleSidebar"
+        />
       </div>
     </transition>
   </div>
@@ -54,63 +91,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-@use '@/assets/custom.scss' as *;
-
-.header-bar {
-  position: fixed;
-  top: 5px;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  background-color: $transparent-primary-color;
-}
-
-/* sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 240px;
-  height: 100%;
-  background-color: $transparent-primary-color;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  z-index: 2000;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-}
-
-.close-btn {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Ensure child component buttons (scoped) are affected using deep selector */
-.sidebar ::v-deep .page-btn,
-.sidebar ::v-deep .directory-btn {
-  width: 100%;
-  text-align: left;
-  padding-left: 0.25rem;
-}
-
-/* Also make the router-button root element stretch so its internal div uses full width */
-.sidebar ::v-deep > div {
-  width: 100%;
-}
-
-/* sidebar slide transition */
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.3s ease;
-}
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateX(100%);
-}
-</style>

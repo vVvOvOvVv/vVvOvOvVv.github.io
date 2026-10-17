@@ -1,9 +1,9 @@
 <template>
-  <div class="project-table container">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
     <div
       v-for="(proj, projIndex) in projectData"
       :key="'proj-' + projIndex"
-      class="project-item p-3"
+      class="p-3"
     >
       <project-box :proj="proj" />
     </div>
@@ -43,17 +43,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.project-table {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 per row by default */
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .project-table {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
-  }
-}
-</style>

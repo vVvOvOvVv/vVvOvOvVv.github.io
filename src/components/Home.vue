@@ -1,11 +1,11 @@
 <template>
-  <div class="home-component m-5 px-5 container">
-    <div class="row align-items-center">
-      <div class="brief-intro col-md-8 d-flex flex-column align-items-start">
+  <div class="mx-auto my-5 w-full max-w-6xl px-5">
+    <div class="flex flex-col items-center md:flex-row">
+      <div class="flex flex-col items-start md:w-2/3">
         <!-- flex-column changes flex direction to vertical -->
         <colored-text>Hey there! I'm</colored-text>
         <colored-text colorType="tealType" size="3vw" weight="bold">Verna Beltran Salangsang</colored-text>
-        <div class="d-flex flex-row ml-auto">
+        <div class="ml-auto flex flex-row">
           <colored-text>I'm a&nbsp;</colored-text>
           <Typer
             :text="[
@@ -31,10 +31,10 @@
           />
         </div>
       </div>
-      <div class="image-intro col-md-4 d-flex align-items-center">
+      <div class="flex items-center md:w-1/3">
         <img
           src="../assets/profile.png"
-          class="img-fluid m-2"
+          class="m-2 h-auto max-w-full"
           alt="Me! ...and my profile picture"
           width="80%"
           oncontextmenu="return false;"
@@ -57,10 +57,8 @@ export default {
   },
   data() {
     return {
-      // note to self: figure out a way to use the variables/values from the scss file
-      // instead of duplicating the values
-      secondaryColor: '#ca6702',
-      primaryText: '#e9d8a6',
+      secondaryColor: 'var(--color-secondary)',
+      primaryText: 'var(--color-primary-text)',
     }
   },
 }

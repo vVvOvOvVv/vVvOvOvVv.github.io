@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a9396;
+  --color-secondary: #ca6702;
+  --color-primary-text: #e9d8a6;
+  --color-background: #010407;
+  --color-important: #ae2012;
+  --color-gradient-start: #f7bc3f;
+  --color-gradient-end: #ec6b01;
+}
+
+@layer base {
+  html,
+  #app {
+    background-color: var(--color-background);
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

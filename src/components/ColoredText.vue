@@ -1,8 +1,12 @@
 <!-- Only for non-interactable text (i.e. not links) -->
 <template>
   <div
-    class="colored-text"
-    :class="[colorType]"
+    class="break-words [overflow-wrap:break-word]"
+    :class="{
+      'text-primary-text': colorType === 'whiteType',
+      'text-primary': colorType === 'tealType',
+      'text-important': colorType === 'importantType',
+    }"
     :style="{ fontSize: size, fontWeight: weight, whiteSpace: 'pre-wrap' }"
   >
     <slot />
@@ -29,22 +33,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-@use '@/assets/custom.scss' as *;
-
-.whiteType {
-  color: $primary-text;
-}
-.tealType {
-  color: $primary-color;
-}
-.importantType {
-  color: $important-color;
-}
-.colored-text {
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-</style>

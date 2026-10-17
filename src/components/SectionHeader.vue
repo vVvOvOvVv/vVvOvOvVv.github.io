@@ -1,9 +1,9 @@
 <template>
-  <div class="section-header container d-flex flex-column mb-3">
+  <div class="mx-auto mb-3 flex w-full max-w-6xl flex-col px-3">
     <colored-text :size="isSubheader ? '24px' : '35px'" weight="bold">
       <slot />
     </colored-text>
-    <canvas id="header-partition" ref="canvasElement" width="200" height="1"></canvas>
+    <canvas id="header-partition" ref="canvasElement" class="block" width="200" height="1"></canvas>
   </div>
 </template>
 
@@ -15,12 +15,6 @@ export default {
   components: {
     ColoredText,
   },
-  data() {
-    return {
-      primaryColor: '#0a9396',
-      secondaryColor: '#ca6702',
-    }
-  },
   props: {
     isSubheader: {
       type: Boolean,
@@ -31,13 +25,10 @@ export default {
     const canvas = this.$refs.canvasElement
     const ctx = canvas.getContext('2d')
 
-    if (this.isSubheader) {
-      var canvasWidth = 20
-    } else {
-      canvasWidth = 40
-    }
-
-    ctx.fillStyle = this.secondaryColor
+    const canvasWidth = this.isSubheader ? 20 : 40
+    ctx.fillStyle = getComputedStyle(document.documentElement)
+      .getPropertyValue('--color-secondary')
+      .trim()
     ctx.fillRect(0, 0, canvasWidth, 1)
   },
 }

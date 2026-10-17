@@ -1,7 +1,12 @@
 <template>
   <div>
-    <button v-if="isPageName" class="page-btn fw-bold" @click="goToSection">{{ msg }}</button>
-    <button v-else class="directory-btn fw-bold" @click="goToSection">{{ msg }}</button>
+    <button
+      class="text-2xl font-bold transition-transform hover:scale-105"
+      :class="buttonClasses"
+      @click="goToSection"
+    >
+      {{ msg }}
+    </button>
   </div>
 </template>
 
@@ -9,6 +14,10 @@
 export default {
   name: 'RouterButton',
   props: {
+    fullWidth: {
+      type: Boolean,
+      default: false,
+    },
     routeName: {
       type: String,
       default: 'home',
@@ -26,6 +35,16 @@ export default {
       default: '',
     },
   },
+  computed: {
+    buttonClasses() {
+      return {
+        'bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent':
+          this.isPageName,
+        'bg-transparent text-primary-text': !this.isPageName,
+        'w-full text-left pl-1': this.fullWidth,
+      }
+    },
+  },
   methods: {
     goToSection() {
       if (this.targetId.length == 0) return
@@ -36,34 +55,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-@use '@/assets/custom.scss' as *;
-
-.page-btn {
-  background: linear-gradient(90deg, $gradient-start, $gradient-end);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  font-size: 24px;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-.directory-btn {
-  color: $primary-text;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  font-size: 24px;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-</style>

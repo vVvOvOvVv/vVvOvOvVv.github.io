@@ -1,7 +1,11 @@
 <template>
   <div
-    class="proj-tag rounded-pill p-1 px-3 d-flex flex-row align-items-center justify-content-center"
-    :class="{ 'type-tag': isType, 'wip-tag': isWip, 'link-tag': isLink }"
+    class="flex flex-row items-center justify-center rounded-full bg-primary px-3 p-1"
+    :class="{
+      'bg-secondary': isType || isLink,
+      'bg-important': isWip,
+      'transition-transform hover:scale-105': isLink,
+    }"
   >
     <a v-if="isLink" :href="link" target="_blank" rel="noopener noreferrer">
       <colored-text weight="bold"> <slot /> </colored-text>
@@ -38,23 +42,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-@use '@/assets/custom.scss' as *;
-.proj-tag {
-  background-color: $primary-color;
-}
-.type-tag {
-  background-color: $secondary-color;
-}
-.link-tag {
-  background-color: $secondary-color;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-.wip-tag {
-  background-color: $important-color;
-}
-</style>

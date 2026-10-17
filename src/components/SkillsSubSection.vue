@@ -1,7 +1,7 @@
 <template>
   <div class="skills-subsection">
     <section-header :is-subheader="true"> {{ subsectionName }} </section-header>
-    <div class="skill-list d-flex flex-row flex-wrap">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4">
       <link-box v-for="skill in skillArray" :key="skill.name" :link="skill" />
     </div>
   </div>
@@ -35,11 +35,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.skill-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-}
-</style>

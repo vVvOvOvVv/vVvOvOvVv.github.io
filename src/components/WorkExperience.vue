@@ -54,7 +54,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-@use '@/assets/custom.scss' as *;
-</style>
