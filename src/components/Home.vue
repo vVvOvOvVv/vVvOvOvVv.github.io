@@ -1,64 +1,74 @@
 <template>
-  <div class="mx-auto my-5 w-full max-w-6xl px-5">
-    <div class="flex flex-col items-center md:flex-row">
-      <div class="flex flex-col items-start md:w-2/3">
-        <!-- flex-column changes flex direction to vertical -->
-        <colored-text>Hey there! I'm</colored-text>
-        <colored-text colorType="tealType" size="3vw" weight="bold">Verna Beltran Salangsang</colored-text>
-        <div class="ml-auto flex flex-row">
-          <colored-text>I'm a&nbsp;</colored-text>
+  <div :class="`home-component w-full h-100 ${className}`">
+    <div class="relative grid h-full min-h-0 grid-cols-[60%_40%]">
+      <div class="relative z-10 flex flex-col justify-end gap-4">
+        <div class="flex flex-col gap-4">
+          <div class="text-left">
+            Hey there! I'm
+          </div>
+          <div class="name-text whitespace-nowrap">
+            Verna B. Salangsang
+          </div>
+        </div>
+        <div class="text-2xl">
+          I'm a
           <Typer
             :text="[
               'systems developer',
+              'software developer',
               'game developer',
               'digital artist',
-              'software developer',
-              'volunteer game & system tester',
+              'volunteer game & systems tester',
               'video game enthusiast',
+              'MTG enjoyer',
               'gym rat',
             ]"
             :style="{
-              '--char-typed-color': secondaryColor,
-              '--caret-idle-color': secondaryColor,
-              '--caret-typing-color': secondaryColor,
-              '--caret-selecting-color': secondaryColor,
-              '--caret-erasing-color': secondaryColor,
-              '--caret-complete-color': secondaryColor,
-              '--char-selected-color': primaryText,
-              '--char-selected-background-color': secondaryColor,
-              fontSize: '16px',
+              '--char-typed-color': blue,
+              '--caret-idle-color': blue,
+              '--caret-typing-color': blue,
+              '--caret-selecting-color': blue,
+              '--caret-erasing-color': blue,
+              '--caret-complete-color': blue,
+              '--char-selected-color': white,
+              '--char-selected-background-color': orange,
             }"
-          />
+          />.
         </div>
       </div>
-      <div class="flex items-center md:w-1/3">
+      <div class="image-outline min-h-0 overflow-hidden">
         <img
-          src="../assets/profile.png"
-          class="m-2 h-auto max-w-full"
-          alt="Me! ...and my profile picture"
-          width="80%"
-          oncontextmenu="return false;"
+          src="../assets/images/profile.jpg"
+          alt="Profile Picture"
+          class="h-full w-full rounded-md object-cover"
         />
       </div>
     </div>
+
+
   </div>
 </template>
 
 <script>
-import ColoredText from './ColoredText.vue'
 import { Typer } from 'vue3-typer'
 import 'vue3-typer/dist/vue-typer.css'
 
 export default {
   name: 'HomeComponent',
   components: {
-    ColoredText,
     Typer,
+  },
+  props: {
+    className: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
-      secondaryColor: 'var(--color-secondary)',
-      primaryText: 'var(--color-primary-text)',
+      blue: '#465C88',
+      orange: '#FF7A30',
+      white: '#E9E3DF',
     }
   },
 }

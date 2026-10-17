@@ -1,13 +1,27 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Climate Crisis';
+  src: url('./fonts/ClimateCrisis-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+}
+
 @theme {
-  --color-primary: #0a9396;
-  --color-secondary: #ca6702;
-  --color-primary-text: #e9d8a6;
-  --color-background: #010407;
-  --color-important: #ae2012;
-  --color-gradient-start: #f7bc3f;
-  --color-gradient-end: #ec6b01;
+  /* key colors */
+  --black: #000000;
+  --dark-blue: #0B192C;
+  --navy-blue: #1E3E62;
+  --soft-blue: #465C88;
+  --orange: #FF7A30;
+  --shadow-60: color-mix(in srgb, var(--dark-blue) 75%, transparent);
+  --white: #E9E3DF;
+
+  --color-background: var(--white);
+  --color-important: var(--orange);
 }
 
 @layer base {
@@ -15,9 +29,47 @@
   #app {
     background-color: var(--color-background);
     font-size: 20px;
+    font-family: 'Figtree', sans-serif;
   }
 
   a {
     text-decoration: none;
   }
+}
+
+.header-bar {
+  background-color: var(--soft-blue);
+}
+
+.title-text {
+  font-family: 'Climate Crisis', sans-serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  letter-spacing: 0.2rem;
+
+  &:hover {
+    color: var(--orange);
+    text-shadow: -0.25rem 0.25rem var(--shadow-60);
+    cursor: pointer;
+  }
+}
+
+.footer-bar {
+  background-color: var(--soft-blue);
+  color: var(--white);
+}
+.name-text{
+  font-family: 'Climate Crisis', sans-serif;
+  font-size: 4rem;
+  color: var(--orange);
+  letter-spacing: 0.2rem;
+  text-shadow: -0.5rem 0.5rem var(--shadow-60);
+}
+
+.section-header {
+  font-family: 'Climate Crisis', sans-serif;
+  font-size: 3rem;
+  color: var(--orange);
+  letter-spacing: 0.2rem;
+  text-shadow: -0.5rem 0.5rem var(--shadow-60);
 }
