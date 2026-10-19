@@ -62,12 +62,12 @@
     },
     {
       "name": "Developer Portfolio",
-      "desc": "Created as a way to showcase my projects, and brush up on Web Development, I present this website!\n\nInitial planning and prototyping done using Miro, and coded entirely on VS Code.",
+      "desc": "Created as a way to showcase my projects, and brush up on Web Development, I present this website!\nThe contents of this portfolio will be updated regularly, or at least where significant updates are appropriate.\n\nInitial planning and prototyping done using Miro, and hand-coded entirely on VS Code.",
       "imgPath": "portfolio.png",
       "type": "Web",
       "category": "Personal",
       "isWIP": false,
-      "toolsUsed": ["Vue3", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "VS Code"],
+      "toolsUsed": ["Vue3", "Tailwind", "GitHub", "VS Code"],
       "externalLink": "https://github.com/vVvOvOvVv/vVvOvOvVv.github.io",
       "linkLabel": "GitHub Link"
     },
