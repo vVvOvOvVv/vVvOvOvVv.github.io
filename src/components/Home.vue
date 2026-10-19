@@ -23,6 +23,7 @@
               'MTG enjoyer',
               'gym rat',
             ]"
+            :shuffle="true"
             :style="{
               '--char-typed-color': blue,
               '--caret-idle-color': blue,
@@ -40,7 +41,7 @@
         <img
           src="../assets/images/profile.jpg"
           alt="Profile Picture"
-          class="h-full w-full rounded-md object-cover pointer-events-none"
+          class="h-full w-full object-cover pointer-events-none"
         />
       </div>
     </div>

@@ -4,7 +4,7 @@
       {{ experience.title }}
     </div>
     <div class="experience-details">
-      <div>{{ experience.company }} || {{ experience.startDate }} - {{ experience.endDate }} </div>
+      <div>{{ experience.company }} || {{ experience.startDate }} <span v-if="experience.endDate">- {{ experience.endDate }} </span></div>
       <div v-if="experience.location">
         {{ experience.location }}
       </div>

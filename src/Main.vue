@@ -1,11 +1,15 @@
 <template>
-  <div class="flex min-h-screen flex-col">
+  <div id="home" class="flex min-h-screen flex-col">
     <header-bar />
     <HomeComponent className="px-40 pt-12" />
     <div class="px-30 py-12">
       <ExperienceSection
         className="mb-12"
         :workExpData="workExpData"
+      />
+      <ProjectsSection
+        className="mb-12"
+        :projData="projData"
       />
     </div>
     <footer-bar />
@@ -16,6 +20,7 @@
 import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
 import ExperienceSection from './components/sections/ExperienceSection.vue';
+import ProjectsSection from './components/sections/ProjectsSection.vue';
 import FooterBar from './components/FooterBar.vue'
 
 import jsonData from './assets/data.json'
@@ -26,6 +31,7 @@ export default {
     HeaderBar,
     HomeComponent,
     ExperienceSection,
+    ProjectsSection,
     FooterBar,
   },
   data() {

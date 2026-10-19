@@ -1,17 +1,15 @@
 <template>
-  <div :class="`experience-section ${className}`">
+  <div id="work-experience" :class="`experience-section scroll-mt-24 ${className}`">
     <SectionHeader
       title="Work & Experience"
       className="mb-4"
     />
     <div class="experience-list px-6">
-      <div
+      <ExperienceCard :experience="exp"
         v-for="(exp, index) in workExpData"
         :key="index"
-        class="experience-item mb-4"
-      >
-        <ExperienceCard :experience="exp" />
-      </div>
+        class="mb-4"
+      />
     </div>
   </div>
 </template>

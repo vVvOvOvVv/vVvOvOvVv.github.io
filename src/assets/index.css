@@ -10,6 +10,11 @@
   src: url('./fonts/Figtree-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Technor';
+  src: url('./fonts/Technor-Variable.ttf') format('truetype');
+}
+
 @theme {
   /* key colors */
   --black: #000000;
@@ -19,6 +24,7 @@
   --orange: #FF7A30;
   --shadow-75: color-mix(in srgb, var(--dark-blue) 75%, transparent);
   --shadow-60: color-mix(in srgb, var(--dark-blue) 60%, transparent);
+  --soft-blue-50: color-mix(in srgb, var(--soft-blue) 50%, transparent);
   --white: #E9E3DF;
 
   --color-background: var(--white);
@@ -31,8 +37,18 @@
     font-size: 20px;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   a {
     font-family: 'Figtree', sans-serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
@@ -42,8 +58,9 @@
 }
 
 .title-text {
-  font-family: 'Climate Crisis', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Technor', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--white);
   letter-spacing: 0.2rem;
 
@@ -54,30 +71,58 @@
   }
 }
 
+.nav-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-weight: bolder;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  box-shadow: -0.25rem 0.25rem var(--shadow-75);
+  color: var(--dark-blue);
+}
+
 .footer-bar {
   background-color: var(--soft-blue);
   color: var(--white);
 }
 
 .name-text{
-  font-family: 'Climate Crisis', sans-serif;
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-family: 'Technor', sans-serif;
+  font-size: 5.5rem;
+  font-weight: bolder;
   color: var(--orange);
   letter-spacing: 0.2rem;
-  text-shadow: -0.5rem 0.5rem var(--shadow-75);
+  text-shadow: -0.35rem 0.35rem var(--shadow-75);
+}
+
+.vue-typer {
+  font-family: 'Technor', sans-serif;
+}
+
+.image-outline {
+  border: 0.5rem solid var(--soft-blue);
+  box-shadow: -0.5rem 0.5rem var(--shadow-75);
 }
 
 .section-header {
-  font-family: 'Climate Crisis', sans-serif;
+  font-family: 'Technor', sans-serif;
   font-size: 2.5rem;
+  font-weight: bolder;
   color: var(--orange);
-  letter-spacing: 0.2rem;
-  text-shadow: -0.3rem 0.3rem var(--shadow-75);
+  letter-spacing: 0.1rem;
+  text-shadow: -0.2rem 0.2rem var(--shadow-75);
 }
 
 .experience-large {
-  font-family: 'Climate Crisis', sans-serif;
+  font-family: 'Technor', sans-serif;
+  font-weight: bold;
   font-size: 2rem;
   color: color-mix(in srgb, var(--orange) 80%, transparent);
 }
@@ -102,4 +147,87 @@
 .experience-card:hover .experience-details {
   font-weight: bolder;
   color: var(--white);
+}
+
+.project-card {
+  transition: all 0.2s ease-in-out;
+  background-color: var(--soft-blue-50);
+}
+
+.project-card:hover {
+  background-color: var(--soft-blue);
+  color: var(--white);
+  box-shadow: -0.5rem 0.5rem var(--shadow-60);
+}
+
+.project-image {
+  outline: 0.25rem solid var(--soft-blue);
+}
+
+.category-tag {
+  background-color: color-mix(in srgb, var(--white) 85%, transparent);
+  color: var(--dark-blue);
+  font-weight: bolder;
+}
+
+.type-tag {
+  background-color: var(--shadow-60);
+  color: var(--white);
+}
+
+.wip-tag {
+  background-color: color-mix(in srgb, var(--orange) 85%, transparent);
+  color: var(--white);
+}
+
+.tool-tag {
+  outline: solid 2px;
+  color: color-mix(in srgb, var(--white) 85%, transparent);
+}
+
+.project-tag {
+  transition: all 0.2s ease-in-out;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+}
+
+.project-card:hover .category-tag {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+.project-card:hover .type-tag {
+  background-color: var(--shadow-75);
+  color: var(--white);
+}
+
+.project-card:hover .wip-tag {
+  background-color: var(--orange);
+}
+
+.project-card:hover .tool-tag {
+  color: var(--white);
+}
+
+.project-card:hover .project-tag {
+  box-shadow: -0.25rem 0.25rem var(--dark-blue);
+}
+
+.project-title {
+  font-family: 'Technor';
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.project-link {
+  transition: all 0.2s ease-in-out;
+  background-color: color-mix(in srgb, var(--orange) 85%, transparent);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  text-decoration: underline;
+
+  &:hover {
+    box-shadow: -0.25rem 0.25rem var(--dark-blue);
+    background-color: var(--orange);
+  }
 }
