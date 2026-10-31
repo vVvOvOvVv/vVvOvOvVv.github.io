@@ -11,7 +11,11 @@
         className="mb-12"
         :projData="projData"
       />
-      <LanguagesToolsSection
+      <SkillsToolsSection
+        className=""
+        :programmingLangData="programmingLangData"
+        :artDesignData="artDesignData"
+        :devToolsData="toolsData"
       />
     </div>
     <footer-bar />
@@ -23,7 +27,7 @@ import HeaderBar from './components/HeaderBar.vue'
 import HomeComponent from './components/Home.vue'
 import ExperienceSection from './components/sections/ExperienceSection.vue';
 import ProjectsSection from './components/sections/ProjectsSection.vue';
-import LanguagesToolsSection from './components/sections/LanguagesToolsSection.vue';
+import SkillsToolsSection from './components/sections/SkillsToolsSection.vue';
 import FooterBar from './components/FooterBar.vue'
 
 import jsonData from './assets/data.json'
@@ -35,7 +39,7 @@ export default {
     HomeComponent,
     ExperienceSection,
     ProjectsSection,
-    LanguagesToolsSection,
+    SkillsToolsSection,
     FooterBar,
   },
   data() {

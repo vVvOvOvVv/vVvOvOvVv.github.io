@@ -11,7 +11,8 @@
       "company": "Lionbridge Technologies",
       "title": "Volunteer Game Tester (UX)",
       "startDate": "Mar 2023",
-      "endDate": "Present"
+      "endDate": "Present",
+      "location": "Remote"
     },
     {
       "company": "Ubisoft",
@@ -115,66 +116,109 @@
       {
         "name": "HTML",
         "imgPath": "html.png",
-        "refLink": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        "refLink": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "relatedProjects": [
+          "Dev Portfolio",
+          "FanTan Display"
+        ],
+        "description": "The foundation of the web, HTML is the standard markup languages for documents built to be viewed on a web browser.\nI've utilized HTML for both websites, such as this very portfolio, and standalone display applications."
       },
       {
         "name": "JavaScript",
         "imgPath": "javascript.png",
-        "refLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "refLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "relatedProjects": [
+          "Dev Portfolio (Vue3)",
+          "FanTan Display (ReactJS)"
+        ],
+        "description": "The core language for building dynamic interfaces, web applications, and modern frontend logic.\nUsing frameworks such as Vue3 and ReactJS, I've developed websites and display applications."
       },
       {
         "name": "CSS",
-        "imgPath": "css.png",
-        "refLink": "https://www.w3.org/Style/CSS/Overview.en.html"
+        "imgPath": "css.webp",
+        "refLink": "https://www.w3.org/Style/CSS/Overview.en.html",
+        "relatedProjects": [
+          "Dev Portfolio",
+          "FanTan Display"
+        ],
+        "description": "The standard for implementing fluid layouts and responsive design.\nI've made use of both \"vanilla\" CSS and Tailwind for various projects."
       },
       {
         "name": "C#",
         "imgPath": "csharp.png",
-        "refLink": "https://dotnet.microsoft.com/en-us/languages/csharp"
+        "refLink": "https://dotnet.microsoft.com/en-us/languages/csharp",
+        "relatedProjects": [
+          "Fantan Display (backend)",
+          "Graveborn prototype",
+          "VR Room"
+        ],
+        "description": "A general-purpose high-level programming language.\nMost recently, I've used .NET10 and .NET framwork to develop the backend of display applications, as well as C# for game projects made with the Unity Engine."
       },
       {
         "name": "GDScript",
-        "imgPath": "godot.png",
-        "refLink": "https://gdscript.com"
+        "imgPath": "godot.webp",
+        "refLink": "https://gdscript.com",
+        "relatedProjects": [
+          "Lightners Live Recreation"
+        ],
+        "description": "The coding language built for the open-source engine Godot."
       }
     ],
     "artAndDesign": [
       {
         "name": "Procreate",
         "imgPath": "procreate.png",
-        "refLink": "https://procreate.com"
+        "refLink": "https://procreate.com",
+        "description": "A digital illustration app for creating artwork on iPad.\nI use Procreate for sketching and illustrating both personal pieces and assets for programming projects.",
+        "relatedProjects": [
+          "FanTan Display",
+          "Graveborn prototype (UI elements)"
+        ]
       },
       {
         "name": "aseprite",
         "imgPath": "aseprite.png",
-        "refLink": "https://www.aseprite.org"
+        "refLink": "https://www.aseprite.org",
+        "description": "A pixel-art editor with tools for drawing, animation, and spritesheets.\nI use Aseprite to create pixel art, including custom cursors and game assets.",
+        "relatedProjects": [
+          "Graveborn prototype (UI elements)",
+          "Custom cursors"
+        ]
       },
       {
         "name": "Blender",
         "imgPath": "blender.png",
-        "refLink": "https://www.blender.org"
+        "refLink": "https://www.blender.org",
+        "description": "A 3D creation suite for modeling, animation, rendering, and more.\nI've used Blender to create assets for projects, including a VR room, as well as simple animation renders for displays.",
+        "relatedProjects": [
+          "VR Room"
+        ]
       }
     ],
     "devTools": [
       {
         "name": "VS Code",
-        "imgPath": "vscode.png",
-        "refLink": "https://code.visualstudio.com"
+        "imgPath": "vscode.webp",
+        "refLink": "https://code.visualstudio.com",
+        "description": "A lightweight, extensible code editor with support for many languages and development workflows."
       },
       {
         "name": "Visual Studio",
-        "imgPath": "visualstudio.png",
-        "refLink": "https://visualstudio.microsoft.com"
+        "imgPath": "visualstudio.webp",
+        "refLink": "https://visualstudio.microsoft.com",
+        "description": "An integrated development environment for building and debugging applications."
       },
       {
         "name": "Godot",
-        "imgPath": "godot.png",
-        "refLink": "https://godotengine.org"
+        "imgPath": "godot.webp",
+        "refLink": "https://godotengine.org",
+        "description": "An open-source game engine for creating 2D and 3D games."
       },
       {
         "name": "Unity",
         "imgPath": "unity.png",
-        "refLink": "https://unity.com"
+        "refLink": "https://unity.com",
+        "description": "A game engine for developing interactive 2D and 3D experiences."
       }
     ]
   },

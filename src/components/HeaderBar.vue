@@ -5,7 +5,7 @@
       <nav class="nav-bar flex items-center justify-end gap-4" aria-label="Page sections">
         <a class="nav-button" href="#work-experience">Work & Experience</a>
         <a class="nav-button" href="#projects">Projects</a>
-        <a class="nav-button" href="#languages-tools">Languages & Tools</a>
+        <a class="nav-button" href="#skills-tools">Skills & Tools</a>
       </nav>
     </div>
   </header>

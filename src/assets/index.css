@@ -63,6 +63,7 @@
   font-weight: bold;
   color: var(--white);
   letter-spacing: 0.2rem;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     color: var(--orange);
@@ -229,5 +230,80 @@
   &:hover {
     box-shadow: -0.25rem 0.25rem var(--dark-blue);
     background-color: var(--orange);
+  }
+}
+
+.skills-tools-list,
+.skills-tools-details {
+  background-color: color-mix(in srgb, var(--soft-blue) 14%, transparent);
+  padding: 1.25rem;
+  min-height: 20rem;
+}
+
+.skills-tools-details {
+  transition: all 0.25s ease-in-out;
+}
+
+.skill-detail-enter-active,
+.skill-detail-leave-active {
+  transition: all 0.25s ease-in-out;
+}
+
+.skill-detail-enter-from,
+.skill-detail-leave-to {
+  opacity: 0;
+  transform: translateY(0.5rem);
+}
+
+.skill-filter,
+.skill-option {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--soft-blue) 18%, transparent);
+  color: var(--dark-blue);
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.skill-filter-active,
+.skill-option-active {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  color: var(--dark-blue);
+}
+
+.skill-filter:hover,
+.skill-option:hover {
+  background-color: var(--orange);
+  box-shadow: -0.25rem 0.25rem var(--dark-blue);
+}
+
+.skill-group-heading {
+  margin-bottom: 0.5rem;
+  color: var(--soft-blue);
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skill-detail-image {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.related-project {
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--soft-blue) 18%, transparent);
+  padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .skills-tools-list,
+  .skills-tools-details {
+    padding: 1rem;
   }
 }
