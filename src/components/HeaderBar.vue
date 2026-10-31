@@ -1,21 +1,20 @@
 <template>
-  <header class="header-bar sticky top-0 z-10 w-full h-fit px-12 py-4">
-    <div class="grid grid-cols-[20%_80%] items-center">
-      <a class="title-text text-left w-fit" href="#home">V.DEV</a>
-      <div class="flex items-center justify-end gap-4">
-        <nav class="nav-bar flex items-center justify-end gap-4" aria-label="Page sections">
-          <a class="nav-button" href="#work-experience">Work & Experience</a>
-          <a class="nav-button" href="#projects">Projects</a>
-          <a class="nav-button" href="#skills-tools">Skills & Tools</a>
-        </nav>
-        <button
-          class="theme-toggle"
-          type="button"
-          role="switch"
-          :aria-label="`Color theme: ${isDarkMode ? 'dark' : 'light'}`"
-          :aria-checked="isDarkMode"
-          @click="toggleTheme"
-        >
+  <header class="header-bar sticky top-0 w-full px-4 py-3 sm:px-6 lg:px-12 lg:py-4">
+    <div class="header-layout">
+      <a class="title-text" href="#home">V.DEV</a>
+      <nav class="nav-bar" aria-label="Page sections">
+        <a class="nav-button" href="#work-experience">Work & Experience</a>
+        <a class="nav-button" href="#projects">Projects</a>
+        <a class="nav-button" href="#skills-tools">Skills & Tools</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        role="switch"
+        :aria-label="`Color theme: ${isDarkMode ? 'dark' : 'light'}`"
+        :aria-checked="isDarkMode"
+        @click="toggleTheme"
+      >
           <span
             class="theme-toggle-option"
             :class="{ 'theme-toggle-option-active': !isDarkMode }"
@@ -39,8 +38,7 @@
               />
             </svg>
           </span>
-        </button>
-      </div>
+      </button>
     </div>
   </header>
 </template>

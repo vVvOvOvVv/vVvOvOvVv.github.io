@@ -4,7 +4,7 @@
       title="Work & Experience"
       className="mb-4"
     />
-    <div class="experience-list px-6">
+    <div class="experience-list sm:px-6">
       <ExperienceCard
         v-for="(exp, index) in workExpData"
         :key="index"

@@ -1,16 +1,15 @@
 <template>
   <article v-reveal :class="`project-card p-4 ${className}`">
     <div
-      class="grid grid-cols-1 items-center gap-4"
-      :class="index % 2 === 0 ? 'grid-cols-[40fr_60fr]' : 'grid-cols-[60fr_40fr]'"
+      class="project-card-grid grid items-center gap-4"
+      :class="index % 2 === 0 ? 'project-card-grid-even' : 'project-card-grid-odd'"
     >
       <img
         :src="resolvedImage"
         :alt="proj.name"
-        :class="{ 'md:order-2': index % 2 !== 0 }"
-        class="project-image w-full object-cover"
+        class="project-card-image project-image w-full object-cover"
       />
-      <div :class="{ 'md:order-1': index % 2 !== 0 }">
+      <div class="project-card-content">
         <div class="project-title mb-2">{{ proj.name }}</div>
         <ProjectTag :category="proj.category" class="mb-2 mr-2" />
         <ProjectTag v-if="proj.isWIP" :isWIP="true" />

@@ -1,16 +1,16 @@
 <template>
-  <div :class="`home-component w-full h-100 ${className}`">
-    <div class="relative grid h-full min-h-0 grid-cols-[60%_40%]">
-      <div class="relative z-10 flex flex-col justify-end gap-4">
+  <div :class="`home-component ${className}`">
+    <div class="home-hero-grid grid">
+      <div class="home-hero-copy relative z-10 flex flex-col justify-end gap-4">
         <div class="flex flex-col gap-4">
-          <div class="text-left">
+          <div>
             Hey there! I'm
           </div>
-          <div class="name-text whitespace-nowrap">
+          <div class="name-text">
             VERNA B. SALANGSANG
           </div>
         </div>
-        <div class="text-2xl">
+        <div class="home-role text-2xl">
           I'm a
           <Typer
             :text="[
@@ -37,7 +37,7 @@
           />.
         </div>
       </div>
-      <div class="image-outline min-h-0 overflow-hidden">
+      <div class="image-outline overflow-hidden">
         <img
           src="../assets/images/profile.jpg"
           alt="Profile Picture"

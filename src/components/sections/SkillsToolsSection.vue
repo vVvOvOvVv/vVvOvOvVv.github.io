@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="grid gap-4 lg:grid-cols-[1fr_1fr]">
+    <div class="skills-tools-grid">
       <div class="skills-tools-list">
         <section
           v-for="group in visibleGroups"

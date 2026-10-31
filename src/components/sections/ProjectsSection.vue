@@ -4,7 +4,7 @@
       title="Projects"
       className="mb-4"
     />
-    <div class="projects-list px-6">
+    <div class="projects-list sm:px-6">
       <ProjectCard
         v-for="(proj, index) in projData"
         :key="index"

@@ -1,8 +1,8 @@
 <template>
   <div id="home" class="flex min-h-screen flex-col">
     <header-bar />
-    <HomeComponent className="px-40 pt-12" />
-    <div class="px-30 py-12">
+    <HomeComponent className="px-4 pt-8 sm:px-8 sm:pt-12 lg:px-40" />
+    <div class="px-4 py-8 sm:px-8 sm:py-12 lg:px-30">
       <ExperienceSection
         className="mb-12"
         :workExpData="workExpData"
