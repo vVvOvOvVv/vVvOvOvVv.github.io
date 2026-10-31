@@ -28,37 +28,11 @@
   ],
   "projects": [
     {
-      "name": "Recreation of Lightner's Live",
-      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game.\n\nI aim to recreate this segment of the game with a few extra additions of my own, such as additional songs, compatibility with Lightners Live Plus custom maps, a slightly different approach to song/map difficulty, and more.",
-      "imgPath": "lightners-live.png",
-      "type": "Game",
-      "category": "Personal",
-      "isWIP": true,
-      "toolsUsed": ["Godot", "GDScript", "GitHub", "DAW", "aseprite"],
-      "externalLink": "https://github.com/vVvOvOvVv/Lightners-Live",
-      "linkLabel": "GitHub Link"
-    },
-    {
-      "name": "FPS Prototype - Graveborn",
-      "desc": "Within a month, I have developed a small-scale game in a group of 5 people, with me leading the overall design and development of the game. We split the work by level design, enemy AI development, menus/UI, and other tasks amongst ourselves. We utilized Unity 3D to develop the game, using free public assets for the game, including character models, animations, particle effects, and VFX.",
-      "imgPath": "graveborn.png",
-      "type": "Game",
-      "category": "Uni Project",
-      "isWIP": false,
-      "toolsUsed": ["Unity3D", "C#", "GitHub"],
-      "externalLink": "https://github.com/vVvOvOvVv/Graveborn",
-      "linkLabel": "GitHub Link"
-    },
-    {
-      "name": "VR Room",
-      "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
-      "imgPath": "vr.png",
-      "type": "VR",
-      "category": "Uni Project",
-      "isWIP": false,
-      "toolsUsed": ["Unity", "C#", "Meta Quest 3", "Blender"],
-      "externalLink": "https://github.com/dini3/CSCI388",
-      "linkLabel": "GitHub Link"
+      "name": "FanTan Display",
+      "desc": "As one of the first new projects under Sands China Ltd., I helped to develop and ship the new displays for the FanTan tables.\nThe new display features a modern layout, better asset customization for operations, thorough logs for troubleshooting, and more.",
+      "type": "Display/App",
+      "category": "Professional",
+      "toolsUsed": ["ReactJS", "C#", "Photino", "VSCode"]
     },
     {
       "name": "Developer Portfolio",
@@ -68,8 +42,57 @@
       "category": "Personal",
       "isWIP": false,
       "toolsUsed": ["Vue3", "Tailwind", "GitHub", "VS Code"],
-      "externalLink": "https://github.com/vVvOvOvVv/vVvOvOvVv.github.io",
-      "linkLabel": "GitHub Link"
+      "links": [
+        {
+          "link": "https://github.com/vVvOvOvVv/vVvOvOvVv.github.io",
+          "label": "GitHub Link"
+        }
+      ]
+    },
+    {
+      "name": "Recreation of Lightner's Live",
+      "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game.\n\nI aim to recreate this segment of the game with a few extra additions of my own, such as additional songs, compatibility with Lightners Live Plus custom maps, a slightly different approach to song/map difficulty, and more.",
+      "imgPath": "lightners-live.png",
+      "type": "Game",
+      "category": "Personal",
+      "isWIP": true,
+      "toolsUsed": ["Godot", "GDScript", "GitHub", "DAW", "aseprite"],
+      "links": [
+        {
+          "link": "https://github.com/vVvOvOvVv/Lightners-Live",
+          "label": "GitHub Link"
+        }
+      ]
+    },
+    {
+      "name": "FPS Prototype - Graveborn",
+      "desc": "Within a month, I have developed a small-scale game in a group of 5 people, with me leading the overall design and development of the game. We split the work by level design, enemy AI development, menus/UI, and other tasks amongst ourselves. We utilized Unity 3D to develop the game, using free public assets for the game, including character models, animations, particle effects, and VFX.",
+      "imgPath": "graveborn.png",
+      "type": "Game",
+      "category": "Uni Project",
+      "isWIP": false,
+      "toolsUsed": ["Unity3D", "C#", "GitHub"],
+      "links": [
+        {
+          "link": "https://github.com/vVvOvOvVv/Graveborn",
+          "label": "GitHub Link"
+        }
+      ]
+    },
+    {
+      "name": "VR Room",
+      "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
+      "imgPath": "vr.png",
+      "type": "VR",
+      "category": "Uni Project",
+      "isWIP": false,
+      "toolsUsed": ["Unity", "C#", "Meta Quest 3", "Blender"],
+      "links": [
+        {
+          "link": "https://github.com/dini3/CSCI388",
+          "label": "GitHub Link"
+        }
+      ]
     },
     {
       "name": "Custom Deltarune Cursors",
@@ -79,8 +102,12 @@
       "category": "Personal",
       "isWIP": false,
       "toolsUsed": ["aseprite"],
-      "externalLink": "https://ko-fi.com/vvvv_v/shop",
-      "linkLabel": "Ko-Fi Link"
+      "links": [
+        {
+          "link": "https://ko-fi.com/vvvv_v/shop",
+          "label": "Ko-Fi Link"
+        }
+      ]
     }
   ],
   "skills": {

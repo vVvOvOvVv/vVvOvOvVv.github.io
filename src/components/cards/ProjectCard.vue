@@ -17,15 +17,18 @@
         <p class="project-description whitespace-pre-line text-sm mb-2">
           {{ proj.desc }}
         </p>
-        <a
-          v-if="proj.externalLink"
-          :href="proj.externalLink"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-link"
-        >
-          {{ proj.linkLabel || 'View project' }}
-        </a>
+        <div v-if="proj.links?.length" class="mb-2 flex flex-wrap gap-2">
+          <a
+            v-for="projectLink in proj.links"
+            :key="projectLink.link"
+            :href="projectLink.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            {{ projectLink.label }}
+          </a>
+        </div>
         <div class="mt-3 flex flex-wrap gap-2">
           <ProjectTag :isType="true">
             {{ proj.type }}
