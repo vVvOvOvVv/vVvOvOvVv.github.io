@@ -1,5 +1,5 @@
 <template>
-  <article :class="`project-card p-4 ${className}`">
+  <article v-reveal :class="`project-card p-4 ${className}`">
     <div
       class="grid grid-cols-1 items-center gap-4"
       :class="index % 2 === 0 ? 'grid-cols-[40fr_60fr]' : 'grid-cols-[60fr_40fr]'"
@@ -48,9 +48,13 @@
 
 <script>
 import ProjectTag from '../tags/ProjectTag.vue'
+import revealOnScroll from '../../directives/revealOnScroll.js'
 
 export default {
   name: 'ProjectCard',
+  directives: {
+    reveal: revealOnScroll,
+  },
   components: {
     ProjectTag,
   },

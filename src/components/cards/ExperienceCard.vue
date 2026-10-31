@@ -1,5 +1,5 @@
 <template>
-  <div :class="`experience-card p-4 ${className}`">
+  <div v-reveal :class="`experience-card p-4 ${className}`">
     <div class="experience-large mb-4">
       {{ experience.title }}
     </div>
@@ -16,8 +16,13 @@
 </template>
 
 <script>
+import revealOnScroll from '../../directives/revealOnScroll.js'
+
 export default {
   name: 'ExperienceCard',
+  directives: {
+    reveal: revealOnScroll,
+  },
   props: {
     experience: {
       type: Object,

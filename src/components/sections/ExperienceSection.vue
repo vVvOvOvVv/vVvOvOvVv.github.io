@@ -5,9 +5,10 @@
       className="mb-4"
     />
     <div class="experience-list px-6">
-      <ExperienceCard :experience="exp"
+      <ExperienceCard
         v-for="(exp, index) in workExpData"
         :key="index"
+        :experience="exp"
         class="mb-4"
       />
     </div>

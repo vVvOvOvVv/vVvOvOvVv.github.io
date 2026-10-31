@@ -216,7 +216,11 @@ html[data-theme='dark'] .theme-toggle-option:not(.theme-toggle-option-active) {
 }
 
 .experience-card {
-  transition: all 0.2s ease-in-out;
+  transition:
+    opacity 0.7s ease-in-out,
+    transform 0.7s ease-in-out,
+    background-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 }
 
 .experience-card:hover {
@@ -234,7 +238,12 @@ html[data-theme='dark'] .theme-toggle-option:not(.theme-toggle-option-active) {
 }
 
 .project-card {
-  transition: all 0.2s ease-in-out;
+  transition:
+    opacity 0.7s ease-in-out,
+    transform 0.7s ease-in-out,
+    background-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   background-color: var(--soft-blue-50);
 }
 
@@ -388,6 +397,19 @@ html[data-theme='dark'] .wip-tag {
   border-radius: 0.75rem;
   background-color: color-mix(in srgb, var(--soft-blue) 18%, transparent);
   padding: 0.5rem 0.75rem;
+}
+
+.scroll-reveal:not(.scroll-revealed) {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal:not(.scroll-revealed) {
+    opacity: 1;
+    transform: none;
+  }
+
 }
 
 @media (max-width: 640px) {
