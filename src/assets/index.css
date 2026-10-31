@@ -27,14 +27,40 @@
   --soft-blue-50: color-mix(in srgb, var(--soft-blue) 50%, transparent);
   --white: #E9E3DF;
 
-  --color-background: var(--white);
+  --page-background: var(--white);
+  --surface-color: var(--soft-blue);
+  --surface-hover: var(--soft-blue);
+  --surface-muted: color-mix(in srgb, var(--soft-blue) 14%, transparent);
+  --surface-subtle: color-mix(in srgb, var(--soft-blue) 18%, transparent);
+  --surface-outline: var(--soft-blue);
+  --accent-foreground: var(--dark-blue);
+
+  --color-background: var(--page-background);
+}
+
+html[data-theme='dark'] {
+  --dark-blue: #E9E3DF;
+  --soft-blue: #A9B9D0;
+  --orange: #FF9A5C;
+  --shadow-75: color-mix(in srgb, #000000 75%, transparent);
+  --shadow-60: color-mix(in srgb, #000000 60%, transparent);
+  --soft-blue-50: color-mix(in srgb, #243A56 85%, transparent);
+  --page-background: #19273b;
+  --surface-color: #153861;
+  --surface-hover: #294b77;
+  --surface-muted: color-mix(in srgb, #243A56 72%, transparent);
+  --surface-subtle: color-mix(in srgb, #243A56 82%, transparent);
+  --surface-outline: #314967;
+  --accent-foreground: #0B192C;
 }
 
 @layer base {
   html,
   #app {
     background-color: var(--color-background);
+    color: var(--dark-blue);
     font-size: 20px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   }
 
   html {
@@ -53,7 +79,7 @@
 }
 
 .header-bar {
-  background-color: var(--soft-blue);
+  background-color: var(--surface-color);
   z-index: 20;
 }
 
@@ -86,11 +112,68 @@
   border-color: var(--orange);
   background-color: var(--orange);
   box-shadow: -0.25rem 0.25rem var(--shadow-75);
-  color: var(--dark-blue);
+  color: var(--accent-foreground);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border: 3px solid #F7F8FA;
+  border-radius: 999px;
+  background-color: #D1D5DB;
+  box-shadow: 0 0 0 1px color-mix(in srgb, #000000 12%, transparent);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    border-color: var(--orange);
+  }
+}
+
+.theme-toggle-option {
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #555B64;
+  transition: all 0.25s ease-in-out;
+}
+
+.theme-toggle-option svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.theme-toggle-option:first-child svg {
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.theme-toggle-option-active {
+  background-color: #397FC1;
+  color: #FFFFFF;
+  transform: scale(1.02);
+}
+
+html[data-theme='dark'] .theme-toggle {
+  border-color: #424851;
+  background-color: #101316;
+  box-shadow: 0 0 0 1px color-mix(in srgb, #FFFFFF 12%, transparent);
+}
+
+html[data-theme='dark'] .theme-toggle:hover {
+  border-color: var(--orange);
+}
+
+html[data-theme='dark'] .theme-toggle-option:not(.theme-toggle-option-active) {
+  color: #73777D;
 }
 
 .footer-bar {
-  background-color: var(--soft-blue);
+  background-color: var(--surface-color);
   color: var(--white);
 }
 
@@ -137,7 +220,7 @@
 }
 
 .experience-card:hover {
-  background-color: var(--soft-blue);
+  background-color: var(--surface-hover);
   box-shadow: -0.5rem 0.5rem var(--shadow-60);
 }
 
@@ -156,18 +239,18 @@
 }
 
 .project-card:hover {
-  background-color: var(--soft-blue);
+  background-color: var(--surface-hover);
   color: var(--white);
   box-shadow: -0.5rem 0.5rem var(--shadow-60);
 }
 
 .project-image {
-  outline: 0.25rem solid var(--soft-blue);
+  outline: 0.25rem solid var(--surface-outline);
 }
 
 .category-tag {
   background-color: color-mix(in srgb, var(--white) 85%, transparent);
-  color: var(--dark-blue);
+  color: #0B192C;
   font-weight: bolder;
 }
 
@@ -179,6 +262,10 @@
 .wip-tag {
   background-color: color-mix(in srgb, var(--orange) 85%, transparent);
   color: var(--white);
+}
+
+html[data-theme='dark'] .wip-tag {
+  color: var(--accent-foreground);
 }
 
 .tool-tag {
@@ -194,7 +281,7 @@
 
 .project-card:hover .category-tag {
   background-color: var(--white);
-  color: var(--dark-blue);
+  color: #0B192C;
 }
 
 .project-card:hover .type-tag {
@@ -211,7 +298,7 @@
 }
 
 .project-card:hover .project-tag {
-  box-shadow: -0.25rem 0.25rem var(--dark-blue);
+  box-shadow: -0.25rem 0.25rem var(--shadow-75);
 }
 
 .project-title {
@@ -223,19 +310,20 @@
 .project-link {
   transition: all 0.2s ease-in-out;
   background-color: color-mix(in srgb, var(--orange) 85%, transparent);
+  color: #0B192C;
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
   text-decoration: underline;
 
   &:hover {
-    box-shadow: -0.25rem 0.25rem var(--dark-blue);
+    box-shadow: -0.25rem 0.25rem var(--shadow-75);
     background-color: var(--orange);
   }
 }
 
 .skills-tools-list,
 .skills-tools-details {
-  background-color: color-mix(in srgb, var(--soft-blue) 14%, transparent);
+  background-color: var(--surface-muted);
   padding: 1.25rem;
   min-height: 20rem;
 }
@@ -259,7 +347,7 @@
 .skill-option {
   border: 2px solid transparent;
   border-radius: 999px;
-  background-color: color-mix(in srgb, var(--soft-blue) 18%, transparent);
+  background-color: var(--surface-subtle);
   color: var(--dark-blue);
   font-weight: 700;
   padding: 0.4rem 0.85rem;
@@ -270,13 +358,14 @@
 .skill-option-active {
   border-color: var(--orange);
   background-color: var(--orange);
-  color: var(--dark-blue);
+  color: var(--accent-foreground);
 }
 
 .skill-filter:hover,
 .skill-option:hover {
   background-color: var(--orange);
-  box-shadow: -0.25rem 0.25rem var(--dark-blue);
+  color: var(--accent-foreground);
+  box-shadow: -0.25rem 0.25rem var(--shadow-75);
 }
 
 .skill-group-heading {
