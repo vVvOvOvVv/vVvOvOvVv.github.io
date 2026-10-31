@@ -155,15 +155,10 @@ html[data-theme='dark'] {
   transition: all 0.25s ease-in-out;
 }
 
-.theme-toggle-option svg {
+.theme-toggle-option img {
   width: 1.35rem;
   height: 1.35rem;
-}
-
-.theme-toggle-option:first-child svg {
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-width: 2;
+  filter: brightness(0) invert(1);
 }
 
 .theme-toggle-option-active {
@@ -176,6 +171,10 @@ html[data-theme='dark'] .theme-toggle {
   border-color: #424851;
   background-color: #101316;
   box-shadow: 0 0 0 1px color-mix(in srgb, #FFFFFF 12%, transparent);
+}
+
+html[data-theme='dark'] .theme-toggle:hover {
+  border-color: var(--orange);
 }
 
 html[data-theme='dark'] .theme-toggle-option:not(.theme-toggle-option-active) {
@@ -491,7 +490,7 @@ html[data-theme='dark'] .wip-tag {
     height: 2rem;
   }
 
-  .theme-toggle-option svg {
+  .theme-toggle-option img {
     width: 1.15rem;
     height: 1.15rem;
   }
