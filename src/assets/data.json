@@ -5,26 +5,30 @@
       "title": "Developer - Casino Systems & Gaming Development",
       "startDate": "Nov 2025",
       "endDate": "Present",
-      "location": "Macau SAR"
+      "location": "Macau SAR",
+      "desc": "As a developer under Casino Administration, I am responsible for the development and maintenance of various table games displays.\nI have worked on and supported the new FanTan Display, baccarat display, in-house casino management system, and other internal tools that support casino operations."
     },
     {
       "company": "Lionbridge Technologies",
       "title": "Volunteer Game Tester (UX)",
       "startDate": "Mar 2023",
       "endDate": "Present",
-      "location": "Remote"
+      "location": "Remote",
+      "desc": "Through Lionbridge's Game Tester program, I've playtested various games, both pre- and post-release, with a focus on user experience. I have also reported bugs over the different playtest sessions, with gameplay recordings and save files as accompanying evidence."
     },
     {
       "company": "Ubisoft",
       "title": "Volunteer Play Tester (UX)",
       "startDate": "Apr 2023",
-      "location": "Singapore"
+      "location": "Singapore",
+      "desc": "I have been invited and participated in playtesting sessions at Ubisoft's Singapore headquarters, focusing on the game's user experience, gameplay loop and progression."
     },
     {
       "company": "University of Wollongong",
       "title": "Bachelor's in Computer Science (Game & Mobile Development)",
       "startDate": "Jan 2022",
-      "endDate": "Dec 2024"
+      "endDate": "Dec 2024",
+      "desc": "Via the Singapore Institute of Management, I earned a Bachelor's in Computer Science with Distinction under the University of Wollongong."
     }
   ],
   "projects": [

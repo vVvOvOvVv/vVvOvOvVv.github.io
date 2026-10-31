@@ -3,7 +3,7 @@
     <div class="mb-5 flex flex-wrap items-center justify-between gap-4">
       <div>
         <SectionHeader title="Skills & Tools" />
-        <p class="text-sm text-[var(--soft-blue)]">
+        <p class="text-sm text-(--soft-blue)">
           Select a skill to view more details
         </p>
       </div>
@@ -63,7 +63,7 @@
             />
             <div>
               <h3 class="text-2xl font-bold">{{ selectedSkill.name }}</h3>
-              <p class="text-sm text-[var(--soft-blue)]">
+              <p class="text-sm text-(--soft-blue)">
                 {{ selectedSkillCategory }}
               </p>
             </div>

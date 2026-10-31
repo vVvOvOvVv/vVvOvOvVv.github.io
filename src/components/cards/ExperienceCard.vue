@@ -8,6 +8,9 @@
       <div v-if="experience.location">
         {{ experience.location }}
       </div>
+      <div
+        class="mt-2 italic"
+        v-if="experience.desc">{{ experience.desc }}</div>
     </div>
   </div>
 </template>
