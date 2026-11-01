@@ -386,7 +386,7 @@ html[data-theme='dark'] .wip-tag {
 .skill-detail-enter-from,
 .skill-detail-leave-to {
   opacity: 0;
-  transform: translateY(0.5rem);
+  transform: translateX(1rem);
 }
 
 .skill-filter,
