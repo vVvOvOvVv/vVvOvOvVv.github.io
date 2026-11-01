@@ -2,12 +2,14 @@
   <header class="header-bar sticky top-0 w-full px-4 py-3 sm:px-6 lg:px-12 lg:py-4">
     <div class="header-layout">
       <a class="title-text" href="#home">V.DEV</a>
-      <nav class="nav-bar" aria-label="Page sections">
-        <a class="nav-button" href="#work-experience">Work & Experience</a>
-        <a class="nav-button" href="#projects">Projects</a>
-        <a class="nav-button" href="#skills-tools">Skills & Tools</a>
-        <a class="nav-button" href="#socials">Socials</a>
-      </nav>
+      <div class="nav-scroll-area">
+        <nav class="nav-bar" aria-label="Page sections">
+          <a class="nav-button" href="#work-experience">Work & Experience</a>
+          <a class="nav-button" href="#projects">Projects</a>
+          <a class="nav-button" href="#skills-tools">Skills & Tools</a>
+          <a class="nav-button" href="#socials">Socials</a>
+        </nav>
+      </div>
       <button
         class="theme-toggle"
         type="button"
