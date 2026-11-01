@@ -1,25 +1,11 @@
 <template>
-  <div class="footer-bar v-container align-center d-flex">
-    <colored-text class="m-3" size="14px">
-      vVvOvOvVv.github.io, last updated November 2025
-    </colored-text>
-  </div>
+  <footer class="footer-bar mt-auto flex w-full items-center px-4 py-2 sm:px-12">
+      vVvOvOvVv.github.io, last updated November, 2026
+  </footer>
 </template>
+
 <script>
-import ColoredText from './ColoredText.vue';
 export default {
-  name: 'FooterBar',
-  components: {
-    ColoredText,
-  },
+  name: 'FooterBar'
 }
 </script>
-<style lang="scss">
-  @use '../assets/custom.scss' as *;
-  .footer-bar {
-    background-color: $primary-color;
-    height: 60px;
-    width: 100%;
-    margin-top: 2rem;
-  }
-</style>

@@ -1,66 +1,75 @@
 <template>
-  <div class="home-component m-5 px-5 container">
-    <div class="row align-items-center">
-      <div class="brief-intro col-md-8 d-flex flex-column align-items-start">
-        <!-- flex-column changes flex direction to vertical -->
-        <colored-text>Hey there! I'm</colored-text>
-        <colored-text colorType="tealType" size="3vw" weight="bold">Verna Beltran Salangsang</colored-text>
-        <div class="d-flex flex-row ml-auto">
-          <colored-text>I'm a&nbsp;</colored-text>
+  <div :class="`home-component ${className}`">
+    <div class="home-hero-grid grid">
+      <div class="home-hero-copy relative z-10 flex flex-col justify-end gap-4">
+        <div class="flex flex-col gap-4">
+          <div>
+            Hey there! I'm
+          </div>
+          <div class="name-text">
+            VERNA B. SALANGSANG
+          </div>
+        </div>
+        <div class="home-role text-2xl">
+          I'm a
           <Typer
             :text="[
               'systems developer',
+              'software developer',
               'game developer',
               'digital artist',
-              'software developer',
-              'volunteer game & system tester',
+              'volunteer game & systems tester',
               'video game enthusiast',
+              'MTG enjoyer',
               'gym rat',
             ]"
+            :shuffle="true"
             :style="{
-              '--char-typed-color': secondaryColor,
-              '--caret-idle-color': secondaryColor,
-              '--caret-typing-color': secondaryColor,
-              '--caret-selecting-color': secondaryColor,
-              '--caret-erasing-color': secondaryColor,
-              '--caret-complete-color': secondaryColor,
-              '--char-selected-color': primaryText,
-              '--char-selected-background-color': secondaryColor,
-              fontSize: '16px',
+              '--char-typed-color': blue,
+              '--caret-idle-color': blue,
+              '--caret-typing-color': blue,
+              '--caret-selecting-color': blue,
+              '--caret-erasing-color': blue,
+              '--caret-complete-color': blue,
+              '--char-selected-color': white,
+              '--char-selected-background-color': orange,
             }"
-          />
+          />.
         </div>
       </div>
-      <div class="image-intro col-md-4 d-flex align-items-center">
+      <div class="image-outline overflow-hidden">
         <img
-          src="../assets/profile.png"
-          class="img-fluid m-2"
-          alt="Me! ...and my profile picture"
-          width="80%"
-          oncontextmenu="return false;"
+          src="../assets/images/profile.jpg"
+          alt="Profile Picture"
+          class="h-full w-full object-cover pointer-events-none"
         />
       </div>
     </div>
+
+
   </div>
 </template>
 
 <script>
-import ColoredText from './ColoredText.vue'
 import { Typer } from 'vue3-typer'
 import 'vue3-typer/dist/vue-typer.css'
 
 export default {
   name: 'HomeComponent',
   components: {
-    ColoredText,
     Typer,
+  },
+  props: {
+    className: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
-      // note to self: figure out a way to use the variables/values from the scss file
-      // instead of duplicating the values
-      secondaryColor: '#ca6702',
-      primaryText: '#e9d8a6',
+      blue: '#465C88',
+      orange: '#FF7A30',
+      white: '#FFFFFF',
     }
   },
 }

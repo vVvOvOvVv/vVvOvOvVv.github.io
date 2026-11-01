@@ -4,77 +4,115 @@
       "company": "Sands China Ltd.",
       "title": "Developer - Casino Systems & Gaming Development",
       "startDate": "Nov 2025",
-      "endDate": "Present"
+      "endDate": "Present",
+      "location": "Macau SAR",
+      "desc": "As a developer under Casino Administration, I am responsible for the development and maintenance of various table games displays.\nI have worked on and supported the new FanTan Display, baccarat display, in-house casino management system, and other internal tools that support casino operations."
     },
     {
       "company": "Lionbridge Technologies",
       "title": "Volunteer Game Tester (UX)",
       "startDate": "Mar 2023",
-      "endDate": "Present"
+      "endDate": "Present",
+      "location": "Remote",
+      "desc": "Through Lionbridge's Game Tester program, I've playtested various games, both pre- and post-release, with a focus on user experience. I have also reported bugs over the different playtest sessions, with gameplay recordings and save files as accompanying evidence."
     },
     {
       "company": "Ubisoft",
       "title": "Volunteer Play Tester (UX)",
       "startDate": "Apr 2023",
-      "endDate": "Apr 2023"
+      "location": "Singapore",
+      "desc": "I have been invited and participated in playtesting sessions at Ubisoft's Singapore headquarters, focusing on the game's user experience, gameplay loop and progression."
     },
     {
-      "company": "UOW",
+      "company": "University of Wollongong",
       "title": "Bachelor's in Computer Science (Game & Mobile Development)",
       "startDate": "Jan 2022",
-      "endDate": "Dec 2024"
+      "endDate": "Dec 2024",
+      "desc": "Via the Singapore Institute of Management, I earned a Bachelor's in Computer Science with Distinction under the University of Wollongong."
     }
   ],
   "projects": [
+    {
+      "name": "FanTan Display",
+      "desc": "As one of the first new projects under Sands China Ltd., I helped to develop and ship the new displays for the FanTan tables.\nThe new display features a modern layout, better asset customization for operations, thorough logs for troubleshooting, and more.",
+      "type": "Display/App",
+      "category": "Professional",
+      "toolsUsed": ["ReactJS", "C#", "Photino", "VSCode"]
+    },
+    {
+      "name": "Developer Portfolio",
+      "desc": "Created as a way to showcase my projects, and brush up on Web Development, I present this website!\nThe contents of this portfolio will be updated regularly, or at least where significant updates are appropriate.\n\nInitial planning and prototyping done using Miro, and hand-coded entirely on VS Code.",
+      "imgPath": "portfolio.png",
+      "type": "Web",
+      "category": "Personal",
+      "isWIP": false,
+      "toolsUsed": ["Vue3", "Tailwind", "GitHub", "VS Code"],
+      "links": [
+        {
+          "link": "https://github.com/vVvOvOvVv/vVvOvOvVv.github.io",
+          "label": "GitHub Link"
+        }
+      ]
+    },
     {
       "name": "Recreation of Lightner's Live",
       "desc": "Lightners Live, a segment from Toby Fox's Deltarune, is a short rhythm game that appears during Chapter 3 of the game.\n\nI aim to recreate this segment of the game with a few extra additions of my own, such as additional songs, compatibility with Lightners Live Plus custom maps, a slightly different approach to song/map difficulty, and more.",
       "imgPath": "lightners-live.png",
       "type": "Game",
+      "category": "Personal",
       "isWIP": true,
       "toolsUsed": ["Godot", "GDScript", "GitHub", "DAW", "aseprite"],
-      "externalLink": "https://github.com/vVvOvOvVv/Lightners-Live",
-      "linkLabel": "GitHub Link"
+      "links": [
+        {
+          "link": "https://github.com/vVvOvOvVv/Lightners-Live",
+          "label": "GitHub Link"
+        }
+      ]
     },
     {
       "name": "FPS Prototype - Graveborn",
       "desc": "Within a month, I have developed a small-scale game in a group of 5 people, with me leading the overall design and development of the game. We split the work by level design, enemy AI development, menus/UI, and other tasks amongst ourselves. We utilized Unity 3D to develop the game, using free public assets for the game, including character models, animations, particle effects, and VFX.",
       "imgPath": "graveborn.png",
       "type": "Game",
+      "category": "Uni Project",
       "isWIP": false,
       "toolsUsed": ["Unity3D", "C#", "GitHub"],
-      "externalLink": "https://github.com/vVvOvOvVv/Graveborn",
-      "linkLabel": "GitHub Link"
+      "links": [
+        {
+          "link": "https://github.com/vVvOvOvVv/Graveborn",
+          "label": "GitHub Link"
+        }
+      ]
     },
     {
       "name": "VR Room",
       "desc": "A group project of a room in VR made in Unity. Within the room, users may interact with different objects, such as a vinyl record, a TV remote, tennis balls, and light switches.\n\nThis project was done for a university assignment and made use of GitHub Desktop for file sharing and version control. Communication was done primarily over Discord, and testing was done using both a Meta Quest 3 and Unity's XR simulator. Some of the assets used within the simulator were created by yours truly using Blender.",
       "imgPath": "vr.png",
       "type": "VR",
+      "category": "Uni Project",
       "isWIP": false,
       "toolsUsed": ["Unity", "C#", "Meta Quest 3", "Blender"],
-      "externalLink": "https://github.com/dini3/CSCI388",
-      "linkLabel": "GitHub Link"
-    },
-    {
-      "name": "Developer Portfolio",
-      "desc": "Created as a way to showcase my projects, and brush up on Web Development, I present this website!\n\nInitial planning and prototyping done using Miro, and coded entirely on VS Code.",
-      "imgPath": "portfolio.png",
-      "type": "Web",
-      "isWIP": false,
-      "toolsUsed": ["Vue3", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "VS Code"],
-      "externalLink": "https://github.com/vVvOvOvVv/vVvOvOvVv.github.io",
-      "linkLabel": "GitHub Link"
+      "links": [
+        {
+          "link": "https://github.com/dini3/CSCI388",
+          "label": "GitHub Link"
+        }
+      ]
     },
     {
       "name": "Custom Deltarune Cursors",
       "desc": "Using aseprite, I created my own set of cursors, featuring several characters from Deltarune, allowing fans to change their own cursors into custom ones! Available for free on my Ko-Fi, with more to come in the future :)",
       "imgPath": "cursors.png",
       "type": "Art",
+      "category": "Personal",
       "isWIP": false,
       "toolsUsed": ["aseprite"],
-      "externalLink": "https://ko-fi.com/vvvv_v/shop",
-      "linkLabel": "Ko-Fi Link"
+      "links": [
+        {
+          "link": "https://ko-fi.com/vvvv_v/shop/cursors",
+          "label": "Ko-Fi Link"
+        }
+      ]
     }
   ],
   "skills": {
@@ -82,99 +120,170 @@
       {
         "name": "HTML",
         "imgPath": "html.png",
-        "refLink": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        "refLink": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "relatedProjects": [
+          "Dev Portfolio",
+          "FanTan Display"
+        ],
+        "description": "The foundation of the web, HTML is the standard markup languages for documents built to be viewed on a web browser.\nI've utilized HTML for both websites, such as this very portfolio, and standalone display applications."
       },
       {
         "name": "JavaScript",
         "imgPath": "javascript.png",
-        "refLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "refLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "relatedProjects": [
+          "Dev Portfolio (Vue3)",
+          "FanTan Display (ReactJS)"
+        ],
+        "description": "The core language for building dynamic interfaces, web applications, and modern frontend logic.\nUsing frameworks such as Vue3 and ReactJS, I've developed websites and display applications."
       },
       {
         "name": "CSS",
-        "imgPath": "css.png",
-        "refLink": "https://www.w3.org/Style/CSS/Overview.en.html"
+        "imgPath": "css.webp",
+        "refLink": "https://www.w3.org/Style/CSS/Overview.en.html",
+        "relatedProjects": [
+          "Dev Portfolio",
+          "FanTan Display"
+        ],
+        "description": "The standard for implementing fluid layouts and responsive design.\nI've made use of both \"vanilla\" CSS and Tailwind for various projects."
       },
       {
         "name": "C#",
         "imgPath": "csharp.png",
-        "refLink": "https://dotnet.microsoft.com/en-us/languages/csharp"
+        "refLink": "https://dotnet.microsoft.com/en-us/languages/csharp",
+        "relatedProjects": [
+          "Fantan Display (backend)",
+          "Graveborn prototype",
+          "VR Room"
+        ],
+        "description": "A general-purpose high-level programming language.\nMost recently, I've used .NET10 and .NET framwork to develop the backend of display applications, as well as C# for game projects made with the Unity Engine."
       },
       {
         "name": "GDScript",
-        "imgPath": "godot.png",
-        "refLink": "https://gdscript.com"
+        "imgPath": "godot.webp",
+        "refLink": "https://gdscript.com",
+        "relatedProjects": [
+          "Lightners Live Recreation"
+        ],
+        "description": "The coding language built for the open-source engine Godot."
       }
     ],
     "artAndDesign": [
       {
         "name": "Procreate",
         "imgPath": "procreate.png",
-        "refLink": "https://procreate.com"
+        "refLink": "https://procreate.com",
+        "description": "A digital illustration app for creating artwork on iPad.\nI use Procreate for sketching and illustrating both personal pieces and assets for programming projects.",
+        "relatedProjects": [
+          "FanTan Display",
+          "Graveborn prototype (UI elements)"
+        ]
       },
       {
         "name": "aseprite",
         "imgPath": "aseprite.png",
-        "refLink": "https://www.aseprite.org"
+        "refLink": "https://www.aseprite.org",
+        "description": "A pixel-art editor with tools for drawing, animation, and spritesheets.\nI use Aseprite to create pixel art, including custom cursors and game assets.",
+        "relatedProjects": [
+          "Graveborn prototype (UI elements)",
+          "Custom cursors"
+        ]
+      },
+      {
+        "name": "Clip Studio Paint (ver.5)",
+        "imgPath": "csp_icon.png",
+        "refLink": "https://www.clipstudio.net/en",
+        "description": "A software family used to create digital illustrations, comics, and 2D animations.\nI've mainly been using CSP to create illustrations for personal projects."
       },
       {
         "name": "Blender",
         "imgPath": "blender.png",
-        "refLink": "https://www.blender.org"
+        "refLink": "https://www.blender.org",
+        "description": "A 3D creation suite for modeling, animation, rendering, and more.\nI've used Blender to create assets for projects, including a VR room, as well as simple animation renders for displays.",
+        "relatedProjects": [
+          "VR Room"
+        ]
       }
     ],
     "devTools": [
       {
         "name": "VS Code",
-        "imgPath": "vscode.png",
-        "refLink": "https://code.visualstudio.com"
+        "imgPath": "vscode.webp",
+        "refLink": "https://code.visualstudio.com",
+        "description": "A lightweight, extensible code editor with support for many languages and development workflows."
       },
       {
         "name": "Visual Studio",
-        "imgPath": "visualstudio.png",
-        "refLink": "https://visualstudio.microsoft.com"
+        "imgPath": "visualstudio.webp",
+        "refLink": "https://visualstudio.microsoft.com",
+        "description": "An integrated development environment for building and debugging applications."
       },
       {
         "name": "Godot",
-        "imgPath": "godot.png",
-        "refLink": "https://godotengine.org"
+        "imgPath": "godot.webp",
+        "refLink": "https://godotengine.org",
+        "description": "An open-source game engine for creating 2D and 3D games.",
+        "relatedProjects": [
+          "Lightners Live Recreation"
+        ]
       },
       {
         "name": "Unity",
         "imgPath": "unity.png",
-        "refLink": "https://unity.com"
+        "refLink": "https://unity.com",
+        "description": "A game engine for developing interactive 2D and 3D experiences.\nI have been using Unity3D in particular for various game development projects.",
+        "relatedProjects": [
+          "Graveborn prototype",
+          "VR Room"
+        ]
       }
     ]
   },
-  "aboutMe": "Born in the Philippines and raised (and currently residing in!) Macau SAR, I'm a graduate from the University of Wollongong, with a degree in Game & Mobile Development with Distinction. I've worked with Android Studio and Unity in university, and am currently working on a personal project using Godot. I love experimenting with new ideas and learning new skills, both relevant and irrelevant to my field!\n\nIn my free time, I create lots of art, and have recently been experimenting with pixel art. I post the majority of my artwork as well as some WIPs on both Instagram and BlueSky! I also enjoy bouldering, weightlifting, and gaming! Feel free to throw me any roguelike suggestions!",
   "socials": [
     {
       "name": "Instagram",
-      "imgPath": "instagram.png",
+      "imgPath": "instagram.webp",
+      "type": "social",
+      "handle": "@v.vovov.v",
+      "description": "Where my art and design work primarily lives!\nI'm most active here, posting on stories and dedicated posts on occassion.",
       "refLink": "https://www.instagram.com/v.vovov.v"
     },
     {
       "name": "BlueSky",
-      "imgPath": "bluesky.png",
+      "imgPath": "bluesky.webp",
+      "type": "social",
+      "handle": "@vvovovv.bsky.social",
+      "description": "A text-based social media platform.\nFind me rambling a bit more casually here.",
       "refLink": "https://bsky.app/profile/vvovovv.bsky.social"
     },
     {
       "name": "Cara",
       "imgPath": "cara.png",
+      "type": "art portfolio",
+      "handle": "@vvvvv",
+      "description": "A platform dedicated to showcasing art and design work, both completed and WIPs.\nCatch some previews, sketches, and scribbles here!",
       "refLink": "https://cara.app/vvvvv"
     },
     {
       "name": "LinkedIn",
       "imgPath": "linkedin.png",
+      "type": "professional",
+      "description": "Want to follow me professionally? Connect with me on LinkedIn!",
       "refLink": "https://www.linkedin.com/in/verna-beltran-salangsang"
     },
     {
       "name": "GitHub",
       "imgPath": "github.png",
+      "type": "professional",
+      "handle": "vVvOvOvVv",
+      "description": "Check out my code repositories, and some of my personal projects here on GitHub.",
       "refLink": "https://github.com/vVvOvOvVv"
     },
     {
       "name": "Ko-Fi",
       "imgPath": "kofi.png",
+      "type": "support me!",
+      "description": "Support my work and/or download the custom cursors I've made (for free!) on Ko-Fi.",
       "refLink": "https://ko-fi.com/vvvv_v"
     }
   ]

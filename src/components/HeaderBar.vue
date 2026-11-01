@@ -1,116 +1,112 @@
 <template>
-  <div class="header-bar container rounded p-2 pb-1 px-4 d-flex flex-row">
-    <!-- logo / home button -->
-    <div class="align-items-start">
-      <router-button target-id="home" />
-    </div>
-
-    <!-- desktop section buttons -->
-    <div class="ms-auto d-none d-md-flex flex-row gap-3">
-      <router-button msg="Work & Experience" :is-page-name="false" target-id="work" />
-      <router-button msg="Projects" :is-page-name="false" target-id="project" />
-      <router-button msg="Skills" :is-page-name="false" target-id="skill" />
-      <router-button msg="About Me" :is-page-name="false" target-id="about" />
-    </div>
-
-    <!-- mobile menu button -->
-    <button class="ms-auto d-md-none btn" @click="toggleSidebar">
-      <colored-text size="24px" weight="bold">
-      ☰
-      </colored-text>
-    </button>
-
-    <!-- sidebar -->
-    <transition name="slide">
-      <div v-if="sidebarOpen" class="sidebar flex-container align-items-start">
-        <button class="close-btn" @click="toggleSidebar">
-          <colored-text>✕</colored-text>
-        </button>
-        <router-button msg="Work & Experience" :is-page-name="false" target-id="work" @click="toggleSidebar" />
-        <router-button msg="Projects" :is-page-name="false" target-id="project" @click="toggleSidebar" />
-        <router-button msg="Skills" :is-page-name="false" target-id="skill" @click="toggleSidebar" />
-        <router-button msg="About Me" :is-page-name="false" target-id="about" @click="toggleSidebar" />
+  <header
+    class="header-bar sticky top-0 w-full px-4 py-3 sm:px-6 lg:px-12 lg:py-4"
+    :class="{ 'nav-hidden': navHidden }"
+  >
+    <div class="header-layout">
+      <a class="title-text" href="#home">V.DEV</a>
+      <div class="nav-scroll-area" :inert="navHidden">
+        <nav class="nav-bar" aria-label="Page sections">
+          <a class="nav-button" href="#work-experience">Work & Experience</a>
+          <a class="nav-button" href="#projects">Projects</a>
+          <a class="nav-button" href="#skills-tools">Skills & Tools</a>
+          <a class="nav-button" href="#socials">Socials</a>
+        </nav>
       </div>
-    </transition>
-  </div>
+      <button
+        class="theme-toggle"
+        type="button"
+        role="switch"
+        :aria-label="`Color theme: ${isDarkMode ? 'dark' : 'light'}`"
+        :aria-checked="isDarkMode"
+        @click="toggleTheme"
+      >
+          <span
+            class="theme-toggle-option"
+            :class="{ 'theme-toggle-option-active': !isDarkMode }"
+            aria-hidden="true"
+          >
+            <img :src="sunIcon" alt="" />
+          </span>
+          <span
+            class="theme-toggle-option"
+            :class="{ 'theme-toggle-option-active': isDarkMode }"
+            aria-hidden="true"
+          >
+            <img :src="moonIcon" alt="" />
+          </span>
+      </button>
+    </div>
+  </header>
 </template>
 
 <script>
-import ColoredText from './ColoredText.vue';
-import RouterButton from './RouterButton.vue'
+import moonIcon from '../assets/images/icons/moon.svg'
+import sunIcon from '../assets/images/icons/sun.svg'
 
 export default {
   name: 'HeaderBar',
-  components: { RouterButton, ColoredText },
+  components: {  },
   data() {
     return {
+      moonIcon,
+      sunIcon,
       sidebarOpen: false,
+      isDarkMode: false,
+      systemTheme: null,
+      navHidden: false,
+      lastScrollY: 0,
     }
+  },
+  mounted() {
+    this.systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+    const savedTheme = localStorage.getItem('theme')
+    this.isDarkMode = savedTheme
+      ? savedTheme === 'dark'
+      : this.systemTheme.matches
+    this.applyTheme()
+    this.systemTheme.addEventListener('change', this.onSystemThemeChange)
+    this.lastScrollY = window.scrollY
+    window.addEventListener('scroll', this.updateNavVisibility, { passive: true })
+    window.addEventListener('resize', this.updateNavVisibility)
+  },
+  beforeUnmount() {
+    this.systemTheme?.removeEventListener('change', this.onSystemThemeChange)
+    window.removeEventListener('scroll', this.updateNavVisibility)
+    window.removeEventListener('resize', this.updateNavVisibility)
   },
   methods: {
     toggleSidebar() {
       this.sidebarOpen = !this.sidebarOpen
     },
+    toggleTheme() {
+      this.isDarkMode = !this.isDarkMode
+      localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light')
+      this.applyTheme()
+    },
+    applyTheme() {
+      document.documentElement.dataset.theme = this.isDarkMode ? 'dark' : 'light'
+    },
+    onSystemThemeChange(event) {
+      if (localStorage.getItem('theme') === null) {
+        this.isDarkMode = event.matches
+        this.applyTheme()
+      }
+    },
+    updateNavVisibility() {
+      const currentScrollY = window.scrollY
+      const isMobile = window.matchMedia('(max-width: 640px)').matches
+
+      if (!isMobile || currentScrollY <= 24) {
+        this.navHidden = false
+      } else if (currentScrollY > this.lastScrollY + 4) {
+        this.navHidden = true
+      } else if (currentScrollY < this.lastScrollY - 4) {
+        this.navHidden = false
+      }
+
+      this.lastScrollY = currentScrollY
+    },
   },
 }
 </script>
-
-<style lang="scss" scoped>
-@use '@/assets/custom.scss' as *;
-
-.header-bar {
-  position: fixed;
-  top: 5px;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  background-color: $transparent-primary-color;
-}
-
-/* sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 240px;
-  height: 100%;
-  background-color: $transparent-primary-color;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  z-index: 2000;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-}
-
-.close-btn {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Ensure child component buttons (scoped) are affected using deep selector */
-.sidebar ::v-deep .page-btn,
-.sidebar ::v-deep .directory-btn {
-  width: 100%;
-  text-align: left;
-  padding-left: 0.25rem;
-}
-
-/* Also make the router-button root element stretch so its internal div uses full width */
-.sidebar ::v-deep > div {
-  width: 100%;
-}
-
-/* sidebar slide transition */
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.3s ease;
-}
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateX(100%);
-}
-</style>
