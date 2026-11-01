@@ -6,6 +6,7 @@
         <a class="nav-button" href="#work-experience">Work & Experience</a>
         <a class="nav-button" href="#projects">Projects</a>
         <a class="nav-button" href="#skills-tools">Skills & Tools</a>
+        <a class="nav-button" href="#socials">Socials</a>
       </nav>
       <button
         class="theme-toggle"

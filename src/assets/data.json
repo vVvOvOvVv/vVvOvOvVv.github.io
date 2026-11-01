@@ -242,32 +242,48 @@
   "socials": [
     {
       "name": "Instagram",
-      "imgPath": "instagram.png",
+      "imgPath": "instagram.webp",
+      "type": "social",
+      "handle": "@v.vovov.v",
+      "description": "Where my art and design work primarily lives!\nI'm most active here, posting on stories and dedicated posts on occassion.",
       "refLink": "https://www.instagram.com/v.vovov.v"
     },
     {
       "name": "BlueSky",
-      "imgPath": "bluesky.png",
+      "imgPath": "bluesky.webp",
+      "type": "social",
+      "handle": "@vvovovv.bsky.social",
+      "description": "A text-based social media platform.\nFind me rambling a bit more casually here.",
       "refLink": "https://bsky.app/profile/vvovovv.bsky.social"
     },
     {
       "name": "Cara",
       "imgPath": "cara.png",
+      "type": "art portfolio",
+      "handle": "@vvvvv",
+      "description": "A platform dedicated to showcasing art and design work, both completed and WIPs.\nCatch some previews, sketches, and scribbles here!",
       "refLink": "https://cara.app/vvvvv"
     },
     {
       "name": "LinkedIn",
       "imgPath": "linkedin.png",
+      "type": "professional",
+      "description": "Want to follow me professionally? Connect with me on LinkedIn!",
       "refLink": "https://www.linkedin.com/in/verna-beltran-salangsang"
     },
     {
       "name": "GitHub",
       "imgPath": "github.png",
+      "type": "professional",
+      "handle": "vVvOvOvVv",
+      "description": "Check out my code repositories, and some of my personal projects here on GitHub.",
       "refLink": "https://github.com/vVvOvOvVv"
     },
     {
       "name": "Ko-Fi",
       "imgPath": "kofi.png",
+      "type": "support me!",
+      "description": "Support my work and/or download the custom cursors I've made (for free!) on Ko-Fi.",
       "refLink": "https://ko-fi.com/vvvv_v"
     }
   ]

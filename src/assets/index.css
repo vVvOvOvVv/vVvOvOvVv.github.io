@@ -436,12 +436,283 @@ html[data-theme='dark'] .wip-tag {
   padding: 0.5rem 0.75rem;
 }
 
+.social-section {
+  scroll-margin-top: 6rem;
+}
+
+.social-section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.social-card {
+  height: 16rem;
+  perspective: 1000px;
+}
+
+.social-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-card-flipped .social-card-inner {
+  transform: rotateY(180deg);
+}
+
+.social-card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid var(--surface-outline);
+  padding: 1.25rem;
+  background-color: var(--surface-muted);
+  color: var(--dark-blue);
+  text-align: left;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.social-card-front {
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.social-card-front:hover,
+.social-card-front:focus-visible {
+  background-color: var(--surface-hover);
+  box-shadow: -0.5rem 0.5rem var(--shadow-75);
+  outline: none;
+}
+
+html:not([data-theme='dark']) .social-card-front:hover,
+html:not([data-theme='dark']) .social-card-front:focus-visible {
+  border-color: var(--soft-blue);
+  background-color: color-mix(in srgb, var(--soft-blue) 28%, var(--surface-muted));
+}
+
+.social-card-back {
+  transform: rotateY(180deg);
+  background-color: var(--page-background);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: -0.5rem 0.5rem var(--shadow-60);
+  }
+}
+
+.social-card-front-top,
+.social-card-back-header,
+.social-card-back-identity,
+.social-card-back-actions {
+  display: flex;
+  align-items: center;
+}
+
+.social-card-front-top,
+.social-card-back-header {
+  justify-content: space-between;
+}
+
+.social-card-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.social-card-image-fallback {
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.social-card-badge {
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--orange) 80%, transparent);
+  color: var(--dark-blue);
+  font-family: monospace;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.65rem;
+}
+
+.social-card-front-copy h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.social-card-handle {
+  color: var(--soft-blue);
+  font-family: monospace;
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.social-card-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--surface-outline);
+  color: var(--soft-blue);
+  font-family: monospace;
+  font-size: 0.7rem;
+  padding-top: 0.75rem;
+}
+
+.social-card-footer span:last-child {
+  color: var(--dark-blue);
+}
+
+.social-card-back-header {
+  min-width: 0;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--surface-outline);
+  padding-bottom: 0.65rem;
+}
+
+.social-card-back-identity,
+.social-card-back-actions {
+  min-width: 0;
+  gap: 0.5rem;
+}
+
+.social-card-back-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.social-card-back-image {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.social-card-back-actions {
+  justify-content: flex-end;
+}
+
+.social-card-back-actions .social-card-handle {
+  text-align: right;
+}
+
+.social-card-flip-back {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--soft-blue);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.2rem;
+}
+
+.social-card-flip-back:hover,
+.social-card-flip-back:focus-visible {
+  color: var(--orange);
+}
+
+.social-card-description {
+  color: var(--soft-blue);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  white-space: pre-line;
+}
+
+.social-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid var(--surface-outline);
+  padding-top: 0.65rem;
+}
+
+.social-card-action {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border: 1px solid var(--surface-outline);
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.social-card-copy {
+  background-color: var(--surface-muted);
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.social-card-link {
+  background-color: color-mix(in srgb, var(--orange) 70%, transparent);
+  color: var(--dark-blue);
+}
+
+.social-card-copy:hover,
+.social-card-link:hover {
+  background-color: var(--orange);
+  color: var(--accent-foreground);
+  box-shadow: -0.25rem 0.25rem var(--shadow-75);
+}
+
+.social-flip-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid var(--surface-outline);
+  border-radius: 999px;
+  background-color: var(--surface-muted);
+  color: var(--dark-blue);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-flip-all:hover,
+.social-flip-all:focus-visible {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  box-shadow: -0.25rem 0.25rem var(--shadow-75);
+  color: var(--accent-foreground);
+  outline: none;
+}
+
 .scroll-reveal:not(.scroll-revealed) {
   opacity: 0;
   transform: translateY(1.25rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .social-card-inner {
+    transition: none;
+  }
+
   .scroll-reveal:not(.scroll-revealed) {
     opacity: 1;
     transform: none;
@@ -543,6 +814,20 @@ html[data-theme='dark'] .wip-tag {
   .skills-tools-list,
   .skills-tools-details {
     padding: 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .social-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

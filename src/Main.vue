@@ -12,10 +12,14 @@
         :projData="projData"
       />
       <SkillsToolsSection
-        className=""
+        className="mb-12"
         :programmingLangData="programmingLangData"
         :artDesignData="artDesignData"
         :devToolsData="toolsData"
+      />
+      <SocialSection
+        className=""
+        :socialData="socialData"
       />
     </div>
     <footer-bar />
@@ -28,6 +32,7 @@ import HomeComponent from './components/Home.vue'
 import ExperienceSection from './components/sections/ExperienceSection.vue';
 import ProjectsSection from './components/sections/ProjectsSection.vue';
 import SkillsToolsSection from './components/sections/SkillsToolsSection.vue';
+import SocialSection from './components/sections/SocialSection.vue';
 import FooterBar from './components/FooterBar.vue'
 
 import jsonData from './assets/data.json'
@@ -40,6 +45,7 @@ export default {
     ExperienceSection,
     ProjectsSection,
     SkillsToolsSection,
+    SocialSection,
     FooterBar,
   },
   data() {
