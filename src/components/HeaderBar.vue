@@ -1,8 +1,11 @@
 <template>
-  <header class="header-bar sticky top-0 w-full px-4 py-3 sm:px-6 lg:px-12 lg:py-4">
+  <header
+    class="header-bar sticky top-0 w-full px-4 py-3 sm:px-6 lg:px-12 lg:py-4"
+    :class="{ 'nav-hidden': navHidden }"
+  >
     <div class="header-layout">
       <a class="title-text" href="#home">V.DEV</a>
-      <div class="nav-scroll-area">
+      <div class="nav-scroll-area" :inert="navHidden">
         <nav class="nav-bar" aria-label="Page sections">
           <a class="nav-button" href="#work-experience">Work & Experience</a>
           <a class="nav-button" href="#projects">Projects</a>
@@ -51,6 +54,8 @@ export default {
       sidebarOpen: false,
       isDarkMode: false,
       systemTheme: null,
+      navHidden: false,
+      lastScrollY: 0,
     }
   },
   mounted() {
@@ -61,9 +66,14 @@ export default {
       : this.systemTheme.matches
     this.applyTheme()
     this.systemTheme.addEventListener('change', this.onSystemThemeChange)
+    this.lastScrollY = window.scrollY
+    window.addEventListener('scroll', this.updateNavVisibility, { passive: true })
+    window.addEventListener('resize', this.updateNavVisibility)
   },
   beforeUnmount() {
     this.systemTheme?.removeEventListener('change', this.onSystemThemeChange)
+    window.removeEventListener('scroll', this.updateNavVisibility)
+    window.removeEventListener('resize', this.updateNavVisibility)
   },
   methods: {
     toggleSidebar() {
@@ -82,6 +92,20 @@ export default {
         this.isDarkMode = event.matches
         this.applyTheme()
       }
+    },
+    updateNavVisibility() {
+      const currentScrollY = window.scrollY
+      const isMobile = window.matchMedia('(max-width: 640px)').matches
+
+      if (!isMobile || currentScrollY <= 24) {
+        this.navHidden = false
+      } else if (currentScrollY > this.lastScrollY + 4) {
+        this.navHidden = true
+      } else if (currentScrollY < this.lastScrollY - 4) {
+        this.navHidden = false
+      }
+
+      this.lastScrollY = currentScrollY
     },
   },
 }

@@ -769,7 +769,17 @@ html:not([data-theme='dark']) .social-card-front:focus-visible {
     grid-column: 1 / -1;
     grid-row: 2;
     min-width: 0;
+    max-height: 5rem;
+    overflow: hidden;
     padding-top: 0.25rem;
+    opacity: 1;
+    transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+  }
+
+  .header-bar.nav-hidden .nav-scroll-area {
+    max-height: 0;
+    padding-top: 0;
+    opacity: 0;
   }
 
   .nav-button {
@@ -837,6 +847,12 @@ html:not([data-theme='dark']) .social-card-front:focus-visible {
   .skills-tools-list,
   .skills-tools-details {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .nav-scroll-area {
+    transition: none;
   }
 }
 
