@@ -683,7 +683,6 @@ html:not([data-theme='dark']) .social-card-front:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: 2px solid var(--surface-outline);
   border-radius: 999px;
   background-color: var(--surface-muted);
   color: var(--dark-blue);
